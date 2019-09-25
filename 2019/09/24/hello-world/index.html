@@ -5,7 +5,7 @@
     <head><meta name="generator" content="Hexo 3.9.0">
         <meta charset="utf-8">
         <meta name="keywords" content="动态规划（DP）相关问题简单思想, 私、気になります(我很好奇)">
-        <meta name="description" content="动态规划( Dynamic Programming, DP )是一种用来解决一类最优化问题的算法思想。简单来说，动态规划将一个复杂的问题分解成若干个子问题，通过综合子问题的最优解来得到原问题的最优解。需要注意的是，动态规划会将每个求解过的子">
+        <meta name="description" content="动态规划 ( Dynamic Programming, DP)是一种用来解决一类最优化问题的算法思想。 简单来说，动态规划将一个复杂的问题分解成若干个子问题，通过综合子问题的最优解来得 到原问题的最优解。需要注意的是，动态规划会将每个求解过">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -315,12 +315,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
-                            </a>
-                        
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
+                            <a href="/tags/动态规划/">
+                                <span class="chip bg-color">动态规划</span>
                             </a>
                         
                     </div>
@@ -331,8 +327,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Markdown/" class="post-category">
-                                Markdown
+                            <a href="/categories/动态规划/" class="post-category">
+                                动态规划
                             </a>
                         
                     </div>
@@ -368,7 +364,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>动态规划( Dynamic Programming, DP )是一种用来解决一类最优化问题的算法思想。<br>简单来说，<strong>动态规划将一个复杂的问题分解成若干个子问题，通过综合子问题的最优解来得<br>到原问题的最优解</strong>。需要注意的是，动态规划会将每个求解过的子问题的解记录下来，这样<br>当下一次碰到同样的子问题时，就可以直接使用之前记录的结果，而不是重复计算。</p>
+                <p>动态规划 ( Dynamic Programming, DP)是一种用来解决一类最优化问题的算法思想。 简单来说，<strong>动态规划将一个复杂的问题分解成若干个子问题，通过综合子问题的最优解来得 到原问题的最优解</strong>。需要注意的是，动态规划会将每个求解过的子问题的解记录下来，这样当下一次碰到同样的子问题时，就可以直接使用之前记录的结果，而不是重复计算。</p>
 <h3 id="一个问题必须拥有重叠子问题和最优子结构，才能使用动态规划去解决。"><a href="#一个问题必须拥有重叠子问题和最优子结构，才能使用动态规划去解决。" class="headerlink" title="一个问题必须拥有重叠子问题和最优子结构，才能使用动态规划去解决。"></a>一个问题必须拥有<code>重叠子问题</code>和<code>最优子结构</code>，才能使用动态规划去解决。</h3><h4 id="什么是重叠子问题？"><a href="#什么是重叠子问题？" class="headerlink" title="什么是重叠子问题？"></a>什么是重叠子问题？</h4><p>比如经典的斐波那契数列，我们都知道，斐波那契数列是递归算法的一个经典练习，通常初学递归算法的时候，斐波那契数列一般是这样写：</p>
 <pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">F</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> 
 <span class="token punctuation">{</span>
@@ -593,33 +589,33 @@
     </div>
 
     
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
 
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC80Njc4NC8yMzI4NQ==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
 </div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '54d94ede3cde461f4d93',
-        clientSecret: '554d24754e3830ba4583c948beafafd6623fbe40',
-        repo: 'gitment-store',
-        owner: 'gaowanliang',
-        admin: "gaowanliang",
-        id: '2019-09-24T11-22-00',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
-    
-
-    
-
-    
-
     
 
     
@@ -629,52 +625,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/09/24/hello-world/">
+                <a href="/2019/09/24/OMNET-入门教程/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="动态规划（DP）相关问题简单思想">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="OMNET++入门教程|第0章——安装">
                         
-                        <span class="card-title">动态规划（DP）相关问题简单思想</span>
+                        <span class="card-title">OMNET++入门教程|第0章——安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            动态规划( Dynamic Programming, DP )是一种用来解决一类最优化问题的算法思想。简单来说，动态规划将一个复杂的问题分解成若干个子问题，通过综合子问题的最优解来得到原问题的最优解。需要注意的是，动态规划会将每个求解过的子
+                            OMNET++入门教程|第0章——安装最近需要学的东西不少，于是准备写点什么。正好最近在研究通信协议方面的知识，老师建议学一学OMNET++，正好网上的相关资料比较少，我自己也写点什么。
+首先第一步去官网下载，打开 OMNET++的官网，选
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-24
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-24
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
+                            <a href="/categories/OMNET/" class="post-category">
+                                    OMNET++
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/OMNET/">
+                        <span class="chip bg-color">-OMNET++</span>
                     </a>
                     
                 </div>
@@ -700,7 +691,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            动态规划( Dynamic Programming, DP )是一种用来解决一类最优化问题的算法思想。简单来说，动态规划将一个复杂的问题分解成若干个子问题，通过综合子问题的最优解来得到原问题的最优解。需要注意的是，动态规划会将每个求解过的子
+                            动态规划 ( Dynamic Programming, DP)是一种用来解决一类最优化问题的算法思想。 简单来说，动态规划将一个复杂的问题分解成若干个子问题，通过综合子问题的最优解来得 到原问题的最优解。需要注意的是，动态规划会将每个求解过
                         
                     </div>
                     <div class="publish-info">
@@ -711,8 +702,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
+                            <a href="/categories/动态规划/" class="post-category">
+                                    动态规划
                                 </a>
                             
                             
@@ -723,12 +714,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/动态规划/">
+                        <span class="chip bg-color">动态规划</span>
                     </a>
                     
                 </div>
@@ -789,7 +776,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">792</span>&nbsp;字
+                class="white-color">963</span>&nbsp;字
             
             
             
