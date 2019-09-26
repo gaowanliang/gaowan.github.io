@@ -462,6 +462,7 @@
 <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>首先第一步去官网下载，打开 <a href="https://omnetpp.org/" target="_blank" rel="noopener">OMNET++的官网</a>，选择右上角的Download，选择合适的版本来进行下载，比如我就是Windows 10 64位，就需要下载Windows版本<br><img src="https://i.loli.net/2019/09/26/4MKnyYdFTQtv2zO.jpg" alt="根据自己的版本进行安装"></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>下载完成后是一个压缩包，在合适的目录解压后，第一次遇到下载软件的压缩包里面没有安装包，感觉还是束手无策的，赶紧上网查了查，终于知道了具体怎么安装，首先先给一张图片<br><img src="https://pic4.zhimg.com/81877348c76aada1e5db9e97cfb3733b_r.jpg" alt="安装过程"><br>这个图片写的已经很清楚了，首先双击运行<code>mingwenv.cmd</code>，然后文件会自动解压，按照其他网站的理论，可能你需要先安装G++之类的编译器，但是我没有遇到这个情况，如果有人遇到什么情况也可以在评论区留言给我。</p>
 <h2 id="编译运行"><a href="#编译运行" class="headerlink" title="编译运行"></a>编译运行</h2><p>第二步就是输入<code>./configure</code>这个命令，它会自动执行，最后出现 <strong>Good！</strong> 之类的话，说明这一步成功了。然后接着输入<code>make</code>命令来进行编译，时间非常长，耐心等待，等屏幕上输出 <strong>Now you can type “omnetpp” to start the IDE</strong> 字样，说明安装完成了，可以直接输入<code>omnetpp</code>打开IDE。然后因为我比较懒，相信它应该有实体的exe，然后就找了起来。这个时候我其实下意识的进入<code>./bin</code>这个文件夹，因为这个文件夹通常是用来存放二进制文件的，但是发现里面没有IDE，是因为其实这个软件没有IDE应该也能运行（我想不出一个仿真软件在没有IDE的情况下是怎么仿真的），真正的IDE是在<code>./ide</code>这个文件夹当中的，这个时候可以建立一个快捷方式放在根目录，更方便。就不用每次通过进命令行输入<code>omnetpp</code>进入IDE了。</p>
+<p><img src="https://i.loli.net/2019/09/26/95I1kyYfN7pJTCO.jpg" alt="omnet++主界面"></p>
 <h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>具体安装过程虽然不如安装包点点简单，但是还是蛮简单的，但是我没有在官方文档找到相关教程，可能还是有点欠缺吧。就说到这里吧，有什么问题大家可以通过评论区联系我，或者直接通过右面的Daovoice联系我（最好是评论区，那个我可能不看），下次我将介绍一个简单的例子来入门OMNET++。</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -705,31 +706,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/09/24/omnet-ru-men-jiao-cheng/">
+                <a href="/2019/09/26/omnet-ru-men-jiao-cheng-2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="OMNET++入门教程|第0章——安装">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="OMNET++入门教程|第1章 —— TicToc模型">
                         
-                        <span class="card-title">OMNET++入门教程|第0章——安装</span>
+                        <span class="card-title">OMNET++入门教程|第1章 —— TicToc模型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            OMNET++入门教程|第0章——安装最近需要学的东西不少，于是准备写点什么。正好最近在研究通信协议方面的知识，老师建议学一学OMNET++，正好网上的相关资料比较少，我自己也写点什么。
-下载首先第一步去官网下载，打开 OMNET++的官网
+                            官方教程链接
+1.1模型首先，让我们从一个由两个节点组成的“网络”开始。节点将做一些简单的事情：其中一个节点将创建一个数据包，两个节点将继续来回传递相同的数据包。我将调用节点tic和toc。稍后我们将逐步改进这个模型，在每个步骤中来引入OM
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-24
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-26
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -742,12 +742,15 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/OMNET/">
                         <span class="chip bg-color">OMNET++</span>
+                    </a>
+                    
+                    <a href="/tags/TicToc/">
+                        <span class="chip bg-color">TicToc</span>
                     </a>
                     
                 </div>
@@ -943,7 +946,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.5k</span>&nbsp;字
+                class="white-color">1.7k</span>&nbsp;字
             
             
             
