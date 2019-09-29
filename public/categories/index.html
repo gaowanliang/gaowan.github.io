@@ -18,14 +18,15 @@
         </title>
         <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="favicon.ico">
 
-        <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-        <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aos/dist/aos.css">
-        <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/awesome/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/materialize/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/aos/aos.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/animate/animate.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css">
-        <link rel="stylesheet" type="text/css" href="/css/matery.min.css">
-        <link rel="stylesheet" type="text/css" href="/css/my.css">
-        <link rel="stylesheet" type="text/css" href="/css/waifu.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/css/matery.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/css/my.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/css/waifu.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/css/iconfont.min.css">
         <style type="text/css">
             
         </style>
@@ -41,7 +42,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">高玩梁的博客</span>
                 </a>
@@ -128,7 +129,7 @@
 
     <div class="mobile-head bg-color">
         
-            <img src="/medias/logo.png" class="logo-img circle responsive-img">
+            <img src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/medias/logo.png" class="logo-img circle responsive-img">
             
                 <div class="logo-name">
                     高玩梁的博客
@@ -293,36 +294,39 @@
         <div class="brand">
             <div class="title center-align">
                 
-                高玩梁的博客
-                
+                    高玩梁的博客
+                        
             </div>
 
             <div class="description center-align">
                 
-                <span id="typed"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-                <script>
-                    var typed = new Typed("#typed", {
-                        strings: ['私、気になります', '我很好奇'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50
-                    });
-                </script>
-                
+                    <span id="typed"></span>
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+                    <script>
+                        var typed = new Typed("#typed", {
+                            strings: ['私、気になります', '我很好奇'],
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: true,
+                            backSpeed: 50
+                        });
+                    </script>
+                    
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
-</script>
-
-
+    <script>
+        if (window.location.host != "127.0.0.1:4000") {
+            $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/medias/banner/' + new Date().getDay() + '.jpg)');
+        } else {
+            $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+        }
+        // 每天切换 banner 图.  Switch banner image every day.
+    </script>
+    
     </div>
 </div>
 
@@ -368,7 +372,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/echarts/echarts.min.js"></script>
 <script type="text/javascript">
     let radarChart = echarts.init(document.getElementById('category-radar'));
 
@@ -428,8 +432,8 @@
                     </div>
                 </div>
 
-                <script src="/js/waifu-tips.min.js"></script>
-                <script src="/js/live2d.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/js/waifu-tips.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/js/live2d.min.js"></script>
 
                 <script type="text/javascript">
                     live2d_settings['modelId'] = 1;
@@ -505,26 +509,34 @@
     <a href="https://github.com/gaowanliang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
+    
 
+        
 
+                
 
+                        
 
+                                
+                                    <a href="https://jq.qq.com/?_wv=1027&amp;k=5YY1i80" class="tooltipped" target="_blank" data-tooltip="QQ群联系我: https://jq.qq.com/?_wv=1027&amp;k=5YY1i80" data-position="top" data-delay="50">
+                                        <i class="fab fa-qq"></i>
+                                    </a>
+                                    
 
+                                        
 
+                                                
+                                                    <a href="https://www.zhihu.com/people/gao-wan-liang-spl/activities" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/gao-wan-liang-spl/activities" data-position="top" data-delay="50">
+                                                        <i class="fab fa-zhihu1">知</i>
+                                                    </a>
+                                                    
+                                                        
+                                                            <a href="https://space.bilibili.com/12014233" class="tooltipped" target="_blank" data-tooltip="关注我的bilibili: https://space.bilibili.com/12014233" data-position="top" data-delay="50">
+                                                                <i class="fab iconfont icon-bilibili"></i>
+                                                            </a>
+                                                            
 
-
-
-
-
-
-
-    <a href="https://www.zhihu.com/people/gao-wan-liang-spl/activities" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/gao-wan-liang-spl/activities" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-</div>
+                                                                </div>
     </div>
 </footer>
 
@@ -557,10 +569,10 @@ $(function () {
 </div>
 
 
-                            <script src="/libs/materialize/materialize.min.js"></script>
-                            <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-                            <script src="https://cdn.jsdelivr.net/npm/aos/dist/aos.js"></script>
-                            <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/materialize/materialize.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/aos/aos.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
                             <script src="https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery-all.min.js"></script>
                             <script src="/js/matery.js"></script>
 
@@ -579,7 +591,7 @@ $(function () {
 
 
                                 
-                                    <script src="/libs/others/clicklove.js" async="async"></script>
+                                    <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/others/clicklove.min.js" async="async"></script>
                                     
                                         
 
@@ -611,7 +623,7 @@ $(function () {
                                                                         
 
                                                                                 
-                                                                                    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+                                                                                    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/background/ribbon-dynamic.min.js" async="async"></script>
                                                                                     
 
                                                                                         
