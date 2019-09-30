@@ -111,3 +111,6 @@ search:
 permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
+
+lazyload:
+  enable: true
