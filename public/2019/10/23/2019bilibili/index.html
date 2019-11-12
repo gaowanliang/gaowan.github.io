@@ -1,0 +1,1151 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0">
+        <meta charset="utf-8">
+        <meta name="keywords" content="B站2019秋招编程题, 私、気になります(我很好奇)">
+        <meta name="description" content="B站在牛客网（ https://www.nowcoder.com/test/16519291/summary ）上发了一套自己秋招的编程题，恰好今年被老师忽悠着去再参加一次蓝桥杯（我参加C++组，所以下面的题都是用C++做的，没用我熟悉的p">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="renderer" content="webkit|ie-stand|ie-comp">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <title>
+            B站2019秋招编程题 | 高玩梁的博客
+        </title>
+        <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/awesome/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/materialize/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/aos/aos.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/animate/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/matery.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/my.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/waifu.min.css">
+        <link rel="stylesheet" href="/css/iconfont.min.css">
+        <style type="text/css">
+            
+        </style>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+    <body>
+        <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">高玩梁的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+            <img src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/medias/logo.png" class="logo-img circle responsive-img">
+            
+                <div class="logo-name">
+                    高玩梁的博客
+                </div>
+                <div class="logo-desc">
+                    
+                                18岁，是学生
+                                    
+                </div>
+    </div>
+
+    
+
+        <ul class="menu-list mobile-menu-list">
+            
+                <li class="m-nav-item">
+                    
+                        <a href="/" class="waves-effect waves-light">
+                            
+                                <i class="fa-fw fas fa-home"></i>
+                                
+                                        首页
+                        </a>
+                        
+                </li>
+                
+                <li class="m-nav-item">
+                    
+                        <a href="/tags" class="waves-effect waves-light">
+                            
+                                <i class="fa-fw fas fa-tags"></i>
+                                
+                                        标签
+                        </a>
+                        
+                </li>
+                
+                <li class="m-nav-item">
+                    
+                        <a href="/categories" class="waves-effect waves-light">
+                            
+                                <i class="fa-fw fas fa-bookmark"></i>
+                                
+                                        分类
+                        </a>
+                        
+                </li>
+                
+                <li class="m-nav-item">
+                    
+                        <a href="/archives" class="waves-effect waves-light">
+                            
+                                <i class="fa-fw fas fa-archive"></i>
+                                
+                                        归档
+                        </a>
+                        
+                </li>
+                
+                <li class="m-nav-item">
+                    
+                        <a href="/about" class="waves-effect waves-light">
+                            
+                                <i class="fa-fw fas fa-user-circle"></i>
+                                
+                                        关于
+                        </a>
+                        
+                </li>
+                
+                <li class="m-nav-item">
+                    
+                        <a href="/friends" class="waves-effect waves-light">
+                            
+                                <i class="fa-fw fas fa-address-book"></i>
+                                
+                                        友情链接
+                        </a>
+                        
+                </li>
+                
+                    
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <a href="https://github.com/gaowanliang" class="waves-effect waves-light" target="_blank">
+                                <i class="fab fa-github-square fa-fw"></i>
+                                Look Me
+                            </a>
+                        </li>
+                        
+        </ul>
+</div>
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/gaowanliang" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Look Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+            
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        B站2019秋招编程题
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/哔哩哔哩/">
+                                <span class="chip bg-color">哔哩哔哩</span>
+                            </a>
+                        
+                            <a href="/tags/秋招/">
+                                <span class="chip bg-color">秋招</span>
+                            </a>
+                        
+                            <a href="/tags/算法/">
+                                <span class="chip bg-color">算法</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/算法/" class="post-category">
+                                算法
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:  
+                    2019-10-23
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="far fa-file-word fa-fw"></i>文章字数:  
+                        2.6k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="far fa-clock fa-fw"></i>阅读时长:  
+                        9 分
+                    </div>
+                    
+                
+				
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <meta name="generator" content="Hexo 3.9.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><p>B站在牛客网（ <a href="https://www.nowcoder.com/test/16519291/summary" target="_blank" rel="noopener">https://www.nowcoder.com/test/16519291/summary</a> ）<br>上发了一套自己秋招的编程题，恰好今年被老师忽悠着去再参加一次蓝桥杯（我参加C++组，所以下面的题都是用C++做的，没用我熟悉的python），虽然那个比赛很水，但是还是要提高我的编程能力才是。于是准备做点题练习下，B站这个题挺好，题目很新颖（仅限题目描述），不过内容和那个比赛一样水，所以给大家解析下。</p>
+<h1 id="1-扭蛋机-answer"><a href="#1-扭蛋机-answer" class="headerlink" title="1.扭蛋机 answer"></a>1.扭蛋机 <a href="https://www.nowcoder.com/questionTerminal/9d26441a396242a9a0f7d2106fc130c7" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>22娘和33娘接到了小电视君的扭蛋任务：<br>一共有两台扭蛋机，编号分别为扭蛋机2号和扭蛋机3号，22娘使用扭蛋机2号，33娘使用扭蛋机3号。<br>扭蛋机都不需要投币，但有一项特殊能力：<br>扭蛋机2号：如果塞x（x范围为>=0正整数）个扭蛋进去，然后就可以扭到2x+1个<br>扭蛋机3号：如果塞x（x范围为>=0正整数）个扭蛋进去，然后就可以扭到2x+2个<br>22娘和33娘手中没有扭蛋，需要你帮她们设计一个方案，两人“轮流扭”（谁先开始不限，扭到的蛋可以交给对方使用），用“最少”的次数，使她们能够最后恰好扭到N个交给小电视君。</p>
+<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>输入一个正整数，表示小电视君需要的N个扭蛋。</p>
+</blockquote>
+<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>输出一个字符串，每个字符表示扭蛋机，字符只能包含”2”和”3”。</p>
+</blockquote>
+<h3 id="输入例子1"><a href="#输入例子1" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>10</p>
+</blockquote>
+<h3 id="输出例子1"><a href="#输出例子1" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>233</p>
+</blockquote>
+<p>思路有两种，一种是BFS，一种是通过二叉树（其实你看到2x+1和2x+2就差不多知道了），因为这个题是这样的：</p>
+<p><img src="https://i0.hdslb.com/bfs/article/b3688094c946e80621c9aeddea1af65114bcc717.png" alt></p>
+<p>可以看到，n是奇数都是最后22扭的，n是偶数都是最后33扭的，那么我们就可以倒着找出最终的顺序。找到下一层之后返回上一层，如果是奇数就是(n-1)/2,偶数就是(n-2)/2，具体可自行验证。给出C++的示例代码：</p>
+<p><img src="https://i0.hdslb.com/bfs/article/3231b98c148b9c98556239e35551d0267723bad2.png" alt></p>
+<h1 id="2-脸滚键盘-answer"><a href="#2-脸滚键盘-answer" class="headerlink" title="2.脸滚键盘 answer"></a>2.脸滚键盘 <a href="https://www.nowcoder.com/questionTerminal/2a3dc06f337d4a2ba41d25c688f95e2f" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p><a href="https://www.bilibili.com/av394281" target="_blank" rel="noopener">av394281</a> 中，充满威严的蕾米莉亚大小姐因为触犯某条禁忌，被隙间妖怪八云紫（紫m……èi）按住头在键盘上滚动。<br>同样在弹幕里乱刷梗被紫姐姐做成罪袋的你被指派找到大小姐脸滚键盘打出的一行字中的第 <code>k</code> 个仅出现一次的字。<br>(为简化问题，大小姐没有滚出 ascii 字符集以外的字)</p>
+<h3 id="输入描述-1"><a href="#输入描述-1" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>每个输入都有若干行，每行的第一个数字为<code>k</code>，表示求第<code>k</code>个仅出现一次的字。然后间隔一个半角空格，之后直到行尾的所有字符表示大小姐滚出的字符串<code>S</code>。</p>
+</blockquote>
+<h3 id="输出描述-1"><a href="#输出描述-1" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>输出的每一行对应输入的每一行的答案，如果无解，输出字符串<code>Myon~</code><br><br>(请不要输出多余的空行）<br><br>为了方便评测，如果答案存在且为c，请输出[c]</p>
+</blockquote>
+<h3 id="输入例子1-1"><a href="#输入例子1-1" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>2 misakamikotodaisuki<br>3 !bakabaka~ bakabaka~ 1~2~9!<br>3 3.1415926535897932384626433832795028841971693993751o582097494459211451488946419191919l91919hmmhmmahhhhhhhhhh<br>7 <a href="http://www.bilibili.com/av170001\" target="_blank" rel="noopener">www.bilibili.com/av170001\</a><br>1 111</p>
+</blockquote>
+<h3 id="输出例子1-1"><a href="#输出例子1-1" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>[d]<br>[9]<br>[l]<br>[7]<br>Myon~</p>
+</blockquote>
+<p>这个题有几种思路，最简单的还是使用映射(map)，让出现的每个字符对应到0上。扫描整个字符串，如果碰到一个字符，就让他对应的数+1，同时记录每个字符出现的顺序。然后扫描记录的顺序，找到第k个对应数是1的字符。但是我们看到题目说的是不超过ASCII，所以直接用ASCII来映射就好了，给出示例C++代码：<br><img src="https://i0.hdslb.com/bfs/article/d434d8a0a72d5be696509fd514a3f559c44d1e4a.png" alt></p>
+<h1 id="3-简单表达式计算-answer"><a href="#3-简单表达式计算-answer" class="headerlink" title="3.简单表达式计算 answer"></a>3.简单表达式计算 <a href="https://www.nowcoder.com/questionTerminal/6221faa383fc49f1b10dffcb62c866bf" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>给定一个合法的表达式字符串，其中只包含非负整数、加法、减法以及乘法符号（不会有括号），例如7+3*4*5+2+4-3-1，请写程序计算该表达式的结果并输出；</p>
+<h3 id="输入描述-2"><a href="#输入描述-2" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>输入有多行，每行是一个表达式，输入以END作为结束</p>
+</blockquote>
+<h3 id="输出描述-2"><a href="#输出描述-2" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>每行表达式的计算结果</p>
+</blockquote>
+<h3 id="输入例子1-2"><a href="#输入例子1-2" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>7+3*4*5+2+4-3-1<br>2-3*1<br>END</p>
+</blockquote>
+<h3 id="输出例子1-2"><a href="#输出例子1-2" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>69<br>-1</p>
+</blockquote>
+<h1 id="4-小A最多会新认识的多少人-answer"><a href="#4-小A最多会新认识的多少人-answer" class="headerlink" title="4.小A最多会新认识的多少人 answer"></a>4.小A最多会新认识的多少人 <a href="https://www.nowcoder.com/questionTerminal/1fe6c3136d2a45fa8ef555b459b6dd26" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>小A参加了一个n人的活动，每个人都有一个唯一编号<code>i</code>(<code>i>=0 & i<n< code>)，其中<code>m</code>对相互认识，在活动中两个人可以通过互相都认识的一个人介绍认识。现在问活动结束后，小A最多会认识多少人？</n<></code></p>
+<h3 id="输入描述-3"><a href="#输入描述-3" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>第一行聚会的人数：n（n>=3 & n<10000）；<br>第二行小A的编号: ai（ai >= 0 & ai < n)；<br>第三互相认识的数目: m（m>=1 & m<br>< n(n-1)/2）；<br>第4到m+3行为互相认识的对，以’,’分割的编号。<!--10000）；<br--></p>
+</blockquote>
+<h3 id="输出描述-3"><a href="#输出描述-3" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>输出小A最多会新认识的多少人？</p>
+</blockquote>
+<h3 id="输入例子1-3"><a href="#输入例子1-3" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>7<br>5<br>6<br>1,0<br>3,1<br>4,1<br>5,3<br>6,1<br>6,5</p>
+</blockquote>
+<h3 id="输出例子1-3"><a href="#输出例子1-3" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>3</p>
+</blockquote>
+<p>这个题很明显的并查集，但是据其他人说用邻接表+BFS也能做，但是这里我就不尝试了，给出并查集（最后要记得减去小A本来就认识的人）的C++示例代码：</p>
+<p><img src="https://i0.hdslb.com/bfs/article/c3620b6cb4835cda3b98a43a1e3cbbfc8126d40e.png" alt></p>
+<h1 id="5-山寨金闪闪-answer"><a href="#5-山寨金闪闪-answer" class="headerlink" title="5.山寨金闪闪 answer"></a>5.山寨金闪闪 <a href="https://www.nowcoder.com/questionTerminal/9363dcb83ca44c61a2c1a8f65aa722b8" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：3秒<br>空间限制：262144K</p>
+</blockquote>
+<p>金闪闪死后，红A拿到了王之财宝，里面有n个武器，长度各不相同。红A发现，拿其中三件武器首尾相接，组成一个三角形，进行召唤仪式，就可以召唤出一个山寨金闪闪。（例如，三件武器长度为10、15、20，可以召唤成功。若长度为10、11、30，首尾相接无法组成三角形，召唤失败。）红A于是开了一个金闪闪专卖店。他把王之财宝排成一排，每个客人会随机抽取到一个区间[l,r],客人可以选取区间里的三件武器进行召唤（客人都很聪慧，如果能找出来合适的武器，一定不会放过）。召唤结束后，客人要把武器原样放回去。m个客人光顾以后，红A害怕过多的金闪闪愉悦太多男人，于是找到了你，希望你帮他统计出有多少山寨金闪闪被召唤出来。</p>
+<h3 id="输入描述-4"><a href="#输入描述-4" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>第一行武器数量:n <= 1*10^7<br>第二行空格分隔的n个int，表示每件武器的长度。<br>第三行顾客数量：m <= 1*10^6<br>后面m行，每行两个int l，r，表示每个客人被分配到的区间。（l<r）< p>
+</r）<><!--=--><!--=--></p></blockquote>
+<h3 id="输出描述-4"><a href="#输出描述-4" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>山寨金闪闪数量。</p>
+</blockquote>
+<h3 id="输入例子1-4"><a href="#输入例子1-4" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>5<br>1 10 100 95 101<br>4<br>1 3<br>2 4<br>2 5<br>3 5</p>
+</blockquote>
+<h3 id="输出例子1-4"><a href="#输出例子1-4" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>3</p>
+</blockquote>
+<p>我知道这是《Fate》系列作品的衍生题目，我不玩游戏，但是咱也知道金闪闪是男的，为什么偷♂税男人啦。不过这个题很有说头，思路可以分为这几步：</p>
+<p>1，首先，判断三个正整数a,b,c是否能组成三角形，判断方法是：将abc升序排列，然后如果a+b>c,则可以构成三角形。其次，判断一个区间[L,R]内是否能找到三个数使其构成三角形，可以将这R-L+1个元素取出并排序，然后从前往后三个三个判断。查询每次区间长度都在1~1e7之间，当然不能每次都暴力找，不然有1e6次查询，时间复杂度肯定爆炸，那么怎么处理呢？实际上，如果数一多，是非常容易构成三角形的，如果要刚好卡到边界，刚好不能构造成三角形（a+b==c），则要构造这样的数据：1，1，2，3，5，8……。<br>巧了，其实就是斐波那契数列，题目的数据给出的数据在int范围内，然后我们发现大概在40多项的时候就不能构造出全都不满足构成三角形的数据了，下面是打表的出的结果。</p>
+<p><img src="https://i0.hdslb.com/bfs/article/b0c8293b0b7cf2342bf718d6688d72b63a629ee2.png" alt><br>int 的范围最大是2的32次方，也就是4294967296，到48项就超了，所以区间超过47必出金闪闪</p>
+<p>所以，只要在给出的区间长度较大的，一定能构成三角形，区间长度较小的，则可以存下来排序后判断，下面给出C++示例代码：</p>
+<p><img src="https://i0.hdslb.com/bfs/article/1d40fc7c91688baa999c7dc02c3de95f02acfeb6.png" alt></p>
+<p>作者：高玩梁<br><a href="https://www.bilibili.com/read/cv3831139" target="_blank" rel="noopener">https://www.bilibili.com/read/cv3831139</a><br>出处： bilibili</p>
+<h1 id="6-比较两个版本字符串version1和version2-answer"><a href="#6-比较两个版本字符串version1和version2-answer" class="headerlink" title="6.比较两个版本字符串version1和version2 answer"></a>6.比较两个版本字符串version1和version2 <a href="https://www.nowcoder.com/questionTerminal/521049ca23f147d698e1cff923c3262a" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>如果version1 > version2 返回1，如果 version1 < version2 返回-1，不然返回0.</p>
+<p>输入的version字符串非空，只包含数字和字符.。.字符不代表通常意义上的小数点，只是用来区分数字序列。例如字符串2.5并不代表二点五，只是代表版本是第一级版本号是2，第二级版本号是5.</p>
+<h3 id="输入描述-5"><a href="#输入描述-5" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>两个字符串，用空格分割。<br>每个字符串为一个version字符串，非空，只包含数字和字符.</p>
+</blockquote>
+<h3 id="输出描述-5"><a href="#输出描述-5" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>只能输出1, -1，或0</p>
+</blockquote>
+<h3 id="输入例子1-5"><a href="#输入例子1-5" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>0.1 1.1</p>
+</blockquote>
+<h3 id="输出例子1-5"><a href="#输出例子1-5" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>-1</p>
+</blockquote>
+<h1 id="7-精灵鼠从入口到出口的最少减少速度-answer"><a href="#7-精灵鼠从入口到出口的最少减少速度-answer" class="headerlink" title="7.精灵鼠从入口到出口的最少减少速度 answer"></a>7.精灵鼠从入口到出口的最少减少速度 <a href="https://www.nowcoder.com/questionTerminal/6171d3a8748248248c21a3c8f330396d" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：2秒<br>空间限制：131072K</p>
+</blockquote>
+<p>猛兽侠中精灵鼠在利剑飞船的追逐下逃到一个n*n的建筑群中，精灵鼠从（0,0）的位置进入建筑群，建筑群的出口位置为（n-1,n-1），建筑群的每个位置都有阻碍，每个位置上都会相当于给了精灵鼠一个固定值减速，因为精灵鼠正在逃命所以不能回头只能向前或者向下逃跑，现在问精灵鼠最少在减速多少的情况下逃出迷宫？</p>
+<h3 id="输入描述-6"><a href="#输入描述-6" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>第一行迷宫的大小: n >=2 & n <= 10000；<br>第2到n+1行，每行输入为以’,’分割的该位置的减速,减速f >=1 & f < 10。<!--=--></p>
+</blockquote>
+<h3 id="输出描述-6"><a href="#输出描述-6" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>精灵鼠从入口到出口的最少减少速度？</p>
+</blockquote>
+<h3 id="输入例子1-6"><a href="#输入例子1-6" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>3<br>5,5,7<br>6,7,8<br>2,2,4</p>
+</blockquote>
+<h3 id="输出例子1-6"><a href="#输出例子1-6" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>19</p>
+</blockquote>
+<h1 id="8-顺时针打印数字矩阵-answer"><a href="#8-顺时针打印数字矩阵-answer" class="headerlink" title="8.顺时针打印数字矩阵 answer"></a>8.顺时针打印数字矩阵 <a href="https://www.nowcoder.com/questionTerminal/ce0c22a435114108bd9acc75f81b5802" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>给定一个数字矩阵，请设计一个算法从左上角开始顺时针打印矩阵元素</p>
+<h3 id="输入描述-7"><a href="#输入描述-7" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>输入第一行是两个数字，分别代表行数M和列数N；接下来是M行，每行N个数字，表示这个矩阵的所有元素；当读到M=-1，N=-1时，输入终止。</p>
+</blockquote>
+<h3 id="输出描述-7"><a href="#输出描述-7" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>请按逗号分割顺时针打印矩阵元素（注意最后一个元素末尾不要有逗号！例如输出“1，2，3”，而不是“1，2，<br>3，”），每个矩阵输出完成后记得换行</p>
+</blockquote>
+<h3 id="输入例子1-7"><a href="#输入例子1-7" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>3 3<br>1 2 3<br>4 5 6<br>7 8 9<br>-1 -1</p>
+</blockquote>
+<h3 id="输出例子1-7"><a href="#输出例子1-7" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>1,2,3,6,9,8,7,4,5</p>
+</blockquote>
+<h1 id="9-写一段程序判断IP字符串是否属于内网IP-answer"><a href="#9-写一段程序判断IP字符串是否属于内网IP-answer" class="headerlink" title="9.写一段程序判断IP字符串是否属于内网IP answer"></a>9.写一段程序判断IP字符串是否属于内网IP <a href="https://www.nowcoder.com/questionTerminal/80ce674313ff43af9d7ac7a41ae21527" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>从业 666 年的 BILIBILI 网络安全工程师 KindMo 最近很困惑，公司有一个业务总是受到 SSRF 攻击。请帮他写一个程序，判断输入的字符串是否属于内网IP，用于防御该漏洞。<br>我们知道常见的内网IP有，127.0.0.1，192.168.0.1 等。</p>
+<h3 id="输入描述-8"><a href="#输入描述-8" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>每次输入仅包含一个IP字符串，即一个测试样例</p>
+</blockquote>
+<h3 id="输出描述-8"><a href="#输出描述-8" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>对于每个测试实例输出整数1或0，1代表True，即输入属于内网IP，0代表False，即输入不属于内网IP或不是IP字符串。</p>
+</blockquote>
+<h3 id="输入例子1-8"><a href="#输入例子1-8" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>42.96.146.169</p>
+</blockquote>
+<h3 id="输出例子1-8"><a href="#输出例子1-8" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>0</p>
+</blockquote>
+<h1 id="10-给定一个整数数组-判断其中是否有3个数和为N-answer"><a href="#10-给定一个整数数组-判断其中是否有3个数和为N-answer" class="headerlink" title="10.给定一个整数数组,判断其中是否有3个数和为N answer"></a>10.给定一个整数数组,判断其中是否有3个数和为N <a href="https://www.nowcoder.com/questionTerminal/b69c933c28164cbd8852820c16556a84" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：131072K</p>
+</blockquote>
+<p>给定一个整数数组,判断其中是否有3个数和为N</p>
+<h3 id="输入描述-9"><a href="#输入描述-9" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>输入为一行<br>逗号前为一个整数数组，每个元素间用空格隔开；逗号后为N</p>
+</blockquote>
+<h3 id="输出描述-9"><a href="#输出描述-9" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>输出bool值<br>True表示存在3个和为N的数<br>False表示不存在3个和为N的数\</p>
+</blockquote>
+<h3 id="输入例子1-9"><a href="#输入例子1-9" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>1 2 3 4 5,10</p>
+</blockquote>
+<h3 id="输出例子1-9"><a href="#输出例子1-9" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>True</p>
+</blockquote>
+<h1 id="11-实现一个HTML语法检查器-answer"><a href="#11-实现一个HTML语法检查器-answer" class="headerlink" title="11.实现一个HTML语法检查器 answer"></a>11.实现一个HTML语法检查器 <a href="https://www.nowcoder.com/questionTerminal/bbe2e0eb156446fd9a8de997e9189fe9" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>实现一个HTML语法检查器。HTML语法规则简化如下：标签必须闭合，可以由开始和结束两个标签闭合，如<code></code></p><div></div>，也可以自闭合，<br>如<code><div></div></code><br>标签可以嵌套如<code><div><a></a></div></code>或者 <code><div><a></a></div></code>，但是标签不能交叉：<code><div><a></a></div></code>是不允许的标签里可以有属性<br>如<code><div id="a<1"></div></code><br>属性的规则是name=”任意非引号字符”，多属性声明之间必须有空格，属性声明不符合规则时，整段HTML都算语法错误<br>输入文本只会出现字母a-z和<>”=<br>请用任意语言实现一个HTML语法检查器函数，有语法错误返回1，没有语法错误返回0<p></p>
+<h3 id="输入描述-10"><a href="#输入描述-10" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>一行，一个HTML字符串</p>
+</blockquote>
+<h3 id="输出描述-10"><a href="#输出描述-10" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>有语法错误返回1，没有语法错误返回0</p>
+</blockquote>
+<h1 id="12-孙悟空的徒弟-answer"><a href="#12-孙悟空的徒弟-answer" class="headerlink" title="12.孙悟空的徒弟 answer"></a>12.孙悟空的徒弟 <a href="https://www.nowcoder.com/questionTerminal/7b841a840db64f5ebec77f6ee7e307e2" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：3秒<br>空间限制：131072K</p>
+</blockquote>
+<p>打败魔人布欧以后，孙悟空收了n个徒弟，每个徒弟战斗力各不相同。他教导所有的徒弟和体术，合体后战斗力为原战斗力相乘。任何两个徒弟都可以合体，所以一共有n*(n-1)/2种合体徒弟。有一天，他想考验一下孙悟天战斗力如何，希望在所有n*(n-1)/2种合体徒弟中选择战斗力第k高的，与孙悟天对战。可是孙悟空徒弟太多了，他已然懵逼，于是找到了你，请你帮他找到对的人。</p>
+<h3 id="输入描述-11"><a href="#输入描述-11" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>第一行两个int。徒弟数量：n <= 1*10^6；战斗力排名:k <="n*(n-1)/2<br">第二行空格分隔n个int，表示每个徒弟的战斗力。<!--=--></br"></p>
+</blockquote>
+<h3 id="输出描述-11"><a href="#输出描述-11" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>战斗力排名k的合体徒弟战斗力。</p>
+</blockquote>
+<h3 id="输入例子1-10"><a href="#输入例子1-10" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>5 2<br>1 3 4 5 9</p>
+</blockquote>
+<h3 id="输出例子1-10"><a href="#输出例子1-10" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>36</p>
+</blockquote>
+<h1 id="13-翻转链表-answer"><a href="#13-翻转链表-answer" class="headerlink" title="13.翻转链表 answer"></a>13.翻转链表 <a href="https://www.nowcoder.com/questionTerminal/f350f14cd22c41aabfa7e54a1b8e8825" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>对于一个链表 L: L0→L1→…→Ln-1→Ln,<br>将其翻转成 L0→Ln→L1→Ln-1→L2→Ln-2→…</p>
+<p>输入是一串数字，请将其转换成单链表格式之后，再进行操作</p>
+<h3 id="输入描述-12"><a href="#输入描述-12" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>一串数字，用逗号分隔</p>
+</blockquote>
+<h3 id="输出描述-12"><a href="#输出描述-12" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>一串数字，用逗号分隔</p>
+</blockquote>
+<h3 id="输入例子1-11"><a href="#输入例子1-11" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>1,2,3,4,5</p>
+</blockquote>
+<h3 id="输出例子1-11"><a href="#输出例子1-11" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>1,5,2,4,3</p>
+</blockquote>
+<h1 id="14-ん…红茶？answer"><a href="#14-ん…红茶？answer" class="headerlink" title="14.ん…红茶？answer"></a>14.ん…红茶？<a href="https://www.nowcoder.com/questionTerminal/14a045880df44cf79626f079bd9f07f1" target="_blank" rel="noopener">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：131072K</p>
+</blockquote>
+<p>高贵的蕾米莉亚大小姐每天需要饮用定量 B 型血的红茶以保持威严，并且要分两杯在不同时段饮用。<br>女仆长十六夜咲夜每天可以制作很多杯不同剂量 B 型血的红茶供蕾米莉亚大小姐饮用。<br>某日，你和天才妖精琪露诺偷偷潜入红魔馆被咲夜抓住，要求在今日份的红茶中挑出所有满足大小姐要求的茶杯，否则……</p>
+<h3 id="输入描述-13"><a href="#输入描述-13" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>每个样例有三行输入，第一行输入表示茶杯个数，第二行输入表示每份茶杯里的 B 型血剂量，第三行表示大小姐今天的定量</p>
+</blockquote>
+<h3 id="输出描述-13"><a href="#输出描述-13" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>对每一个样例，输出所有可能的搭配方案，如果有多种方案，请按每个方案的第一杯 B 型血剂量的大小升序排列。<br>如果无法找到任何一种满足大小姐的方案，输出”NO”(不包括引号)并换行。</p>
+</blockquote>
+<h3 id="输入例子1-12"><a href="#输入例子1-12" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>7<br>2 4 6 1 3 5 7<br>7</p>
+</blockquote>
+<h3 id="输出例子1-12"><a href="#输出例子1-12" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>1 6<br>2 5<br>3 4</p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fas fa-exclamation-triangle"></i>  
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">
+                    <img alt style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png">
+                </a>
+            </div>
+            <br>
+            <a href="/2019/10/23/2019bilibili/">
+                    《B站2019秋招编程题》
+            </a> 由
+            <a href="https://www.gwl6.me">
+                Gaowan Liang
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC80Njc4NC8yMzI4NQ==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i> 上一篇</div>
+            <div class="card">
+                <a href="/2019/11/04/cloudflare-worker-jsproxy/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Cloudflare Worker+jsproxy实现浏览器代理访问谷歌">
+                        
+                        <span class="card-title">Cloudflare Worker+jsproxy实现浏览器代理访问谷歌</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Cloudflare Worker+jsproxy实现浏览器代理访问谷歌简介CloudFlare Worker 是 CloudFlare 的边缘计算服务。开发者可通过 JavaScript 对 CDN 进行编程，从而能灵活处理 HTTP 请
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/代理/" class="post-category">
+                                    代理
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/jsproxy/">
+                        <span class="chip bg-color">jsproxy</span>
+                    </a>
+                    
+                    <a href="/tags/前端代理/">
+                        <span class="chip bg-color">前端代理</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇 <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/10/05/blog-jiao-cheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="高大上博客制作教程">
+                        
+                        <span class="card-title">高大上博客制作教程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            高大上博客制作教程安装Node.js首先下载稳定版Node.js，我这里给的是64位的。
+安装选项全部默认，一路点击Next。
+最后安装好之后，按Win+R打开命令提示符，输入node -v和npm -v，如果出现版本号，那么就安装成功了。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/博客/" class="post-category">
+                                    博客
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/博客/">
+                        <span class="chip bg-color">博客</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+    
+
+</main>
+
+
+                <div class="waifu">
+                    <div class="waifu-tips"></div>
+                    <canvas id="live2d" class="live2d"></canvas>
+                    <div class="waifu-tool">
+                        <span class="fui-home"></span>
+                        <span class="fui-chat"></span>
+                        <span class="fui-eye"></span>
+                        <span class="fui-user"></span>
+                        <span class="fui-photo"></span>
+                        <span class="fui-info-circle"></span>
+                        <span class="fui-cross"></span>
+                    </div>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/js/waifu-tips.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/js/live2d.min.js"></script>
+
+                <script type="text/javascript">
+                    live2d_settings['modelId'] = 1;
+                    live2d_settings['modelTexturesId'] = 87;
+                    initModel("/waifu-tips.json")
+                </script>
+                <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright ©
+            <span id="year">年份</span>
+            <a href="https://www.gwl6.me" target="_blank">Gaowan Liang</a>
+            | Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+            | Theme <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+             <i class="fas fa-chart-area"></i> 站点总字数: <span class="white-color">8.4k</span> 字
+            
+            
+            
+            
+            
+            <br>
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    window.setTimeout("siteTime()", 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2019";
+                    var startMonth = "9";
+                    var startDate = "23";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+<a href="https://github.com/gaowanliang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <i class="fab fa-github"></i>
+</a>
+
+
+
+
+
+
+
+
+
+<a href="https://jq.qq.com/?_wv=1027&k=5YY1i80" class="tooltipped" target="_blank" data-tooltip="QQ群联系我: https://jq.qq.com/?_wv=1027&k=5YY1i80" data-position="top" data-delay="50">
+    <i class="fab fa-qq"></i>
+</a>
+
+
+
+
+
+<a href="https://www.zhihu.com/people/gao-wan-liang-spl/activities" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/gao-wan-liang-spl/activities" data-position="top" data-delay="50">
+    <i class="fab fa-zhihu1">知</i>
+</a>
+
+
+<a href="https://space.bilibili.com/12014233" class="tooltipped" target="_blank" data-tooltip="关注我的bilibili: https://space.bilibili.com/12014233" data-position="top" data-delay="50">
+    <i class="fab"><img style="width: 24px;" src="https://cdn.jsdelivr.net/gh/gaowanliang/p/BILIBILI.png"></i>
+</a>
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+                    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>  搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+                        <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+                            <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/materialize/materialize.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/aos/aos.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery-all.min.js"></script>
+                            <script src="/js/matery.js"></script>
+
+                            <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145667660-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-145667660-3');
+</script>
+
+
+                                
+                                    <script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/others/clicklove.min.js" async="async"></script>
+                                    
+                                        
+
+                                                
+
+                                                        
+
+                                                                
+
+                                                                        
+
+                                                                                
+                                                                                    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/libs/background/ribbon-dynamic.min.js" async="async"></script>
+                                                                                    
+
+                                                                                        
+    
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

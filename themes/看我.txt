@@ -1,0 +1,3 @@
+有同学说会报错，把上面这个文件替换你的根目录的_config.yml,然后按Ctrl+H全局替换gwl6为你的名字。
+然后把上面这个package.json替换你根目录里的package.json，然后在bash里输入npm install
+就行了
