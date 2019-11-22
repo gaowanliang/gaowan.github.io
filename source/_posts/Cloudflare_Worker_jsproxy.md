@@ -1,5 +1,5 @@
 ---
-title: Cloudflare Worker+jsproxy实现浏览器代理访问谷歌
+title: Cloudflare Worker+jsproxy实现浏览器代理
 toc: true
 reward: true
 date: 2019-11-04 20:54:38
@@ -9,9 +9,9 @@ tags:
     - jsproxy
     - 前端代理
 categories: 代理
+thumbnail: 'https://i.loli.net/2019/11/22/aI4SrFWthNkX3Zf.jpg'
 ---
 # Cloudflare Worker+jsproxy实现浏览器代理访问谷歌
-
 
 ## 简介
 

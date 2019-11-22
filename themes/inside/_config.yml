@@ -5,37 +5,38 @@
 # Appearance
 appearance:
   # Accent color, default '#2a2b33'
-  accent_color:
+  accent_color: '#8e44ad'
   # Font color, default '#363636'
-  foreground_color:
+  foreground_color: 
   # Border color, default '#e0e0e0'
-  border_color:
+  border_color: 
   # body background, default '#f5f7fa'
-  background:
+  background: "https://cdn.jsdelivr.net/gh/gaowanliang/p/img/wl.png"
+
   # Sidebar background (when opened), default to accent_color
-  sidebar_background:
+  sidebar_background: 
   # Card background, default '#fff'
-  card_background:
+  card_background: "#FCFDFC"
 
   # All background settings above support image, e.g.,
   # '//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png #f5f7fa' or
   # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
 
   # Maximum width of content
-  # content_width: 640
+  content_width: 800
 
   # Fonts
   font:
     # Url of font css file
     # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
-    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat|Noto+Sans+SC
 
     # Base font which applied to body
-    base: "'Josefin Sans', 'PingFang SC'"
+    base: "'Josefin Sans', 'Noto Sans SC'"
     # Sidebar author font, fallback to `base`
     logo: media/favicon.ico
     # Sidebar menu font, fallback to `base`
-    menu: 'Baloo Bhaijaan'
+    menu: "Baloo Bhaijaan"
     # Font for:
     # - percentage on the fab button
     # - month text on archives page
@@ -65,7 +66,6 @@ appearance:
   #   '#ab4642', '#dc9656', '#f7ca88', '#a1b56c',
   #   '#86c1b9', '#7cafc2', '#ba8baf', '#a16946'
   # ]
-
   # Harmonic16 Light by Jannik Siebert (https://github.com/janniks)
   # highlight: [
   #   '#f7f9fb', '#e5ebf1', '#cbd6e2', '#aabcce',
@@ -73,7 +73,6 @@ appearance:
   #   '#bf8b56', '#bfbf56', '#8bbf56', '#56bf8b',
   #   '#568bbf', '#8b56bf', '#bf568b', '#bf5656'
   # ]
-
   # Tomorrow Night by Chris Kempson (http://chriskempson.com)
   # highlight: [
   #   '#1d1f21', '#282a2e', '#373b41', '#969896',
@@ -86,7 +85,7 @@ appearance:
 profile:
   # `email` is used for gravatar(https://en.gravatar.com),
   # fallback to `hexo.config.email` if not specified
-  email:
+  email: false
 
   # You can set Avatar URL directly
   avatar: media/logo.png
@@ -95,20 +94,22 @@ profile:
 
 # Sidebar navigation links
 menu:
-  Home: /
+  🏠 Home: /
+  🎻 About: /about
+  📝 Edit: /edit
   # About: /about
   # Links: /links
-  # Github: https://github.com/username
+  Github: https://github.com/gaowanliang
 
 # Social media URL
 # Try to sort by changing the order of the keys
 sns:
   # `email` will fallback to `profile.email` if not specified
-  email:
+  email: false
   # If you use hexo-generator-feed, `sns.feed` can be left blank
   # and the theme will try to get `hexo.config.feed.path`.
   feed:
-  github:
+  github: https://github.com/gaowanliang
   twitter:
   facebook:
   instagram:
@@ -116,13 +117,13 @@ sns:
   dribbble:
   telegram:
   youtube:
-  hangouts:
+  hangouts: https://space.bilibili.com/12014233
   linkedin:
-  pinterest:
+  pinterest: https://www.zhihu.com/people/gao-wan-liang-spl/activities
   soundcloud:
   myspace:
   weibo:
-  qq:
+  qq: https://jq.qq.com/?_wv=1027&k=5HV4nXU
 
 # Sidebar footer copyright info
 footer:
@@ -139,7 +140,6 @@ footer:
   # custom: Hosted by <a target="_blank" rel="external nofollow"
   #   href="https://pages.github.com/"><b>Github Pages</b></a>
 
-
 # ---------------------------------------------------------------
 # Content
 # ---------------------------------------------------------------
@@ -154,7 +154,6 @@ page:
 
   # Display copyright notice, default to `false`
   copyright: true
-
 
 # Post
 post:
@@ -181,10 +180,8 @@ category:
 search:
   # Display a quick search button in fab
   # fab: true
-
   # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
   # page: true
-
   # Local search
   # adapter:
   #   range:
@@ -192,7 +189,6 @@ search:
   #     - page
   #   per_page: 20
   #   limit: 10000
-
   # Custom search
   # adapter:
   #   # Used for pagination
@@ -224,7 +220,6 @@ search:
   #     # Used to retrieve content from per hit
   #     content: _snippetResult.content.value
 
-
 # ---------------------------------------------------------------
 # Content addons
 # ---------------------------------------------------------------
@@ -240,7 +235,6 @@ assets:
 toc:
   # The depth of toc, default to `3`, maximum to `4`.
   # depth: 3
-
   # Showing index before title, eg. 1.1 title, default to `true`
   # index: true
 
@@ -255,15 +249,17 @@ reward:
   # use `name` to apply
   methods:
     - name: wechat
-      qrcode: media/wechat.png
-       # url: 
+      qrcode:
+        media/wechat.png
+        # url:
       text: This a Wechat pay qrcode
-      color: '#0ABB08'
+      color: "#0ABB08"
     - name: alipay
-      qrcode: media/alipay.jpg
-       # url: 
+      qrcode:
+        media/alipay.jpg
+        # url:
       text: This a Alipay qrcode
-      color: '#01A0E9'
+      color: "#01A0E9"
   # methods:
   #   - name: paypal
   #     qrcode: paypal.jpg
@@ -280,16 +276,12 @@ copyright:
   # Display link, default to `true`
   # link: false
 
-  license: 自由转载-非商用-禁止演绎-保持署名
-     (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\"
-     rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
+  license: 自由转载-非商用-禁止演绎-保持署名(<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
 
   # Display published date, default to `false`
   # published: false
-
   # Display updated date, default to `false`
   # updated: false
-
   # Custom text, override above settings
   # custom: my copyright
 
@@ -303,14 +295,12 @@ comments:
   #   script: //disqus_shortname.disqus.com/embed.js
   #   # Autoload, default to `true`, set to `false` to display a button
   #   autoload: false
-
   livere:
-     uid: MTAyMC80Njc4NC8yMzI4NQ==
-  #   # LiveRe script, default to `https://cdn-city.livere.com/js/embed.dist.js`
-  #   script:
-  #   # Autoload, default to `true`, set to `false` to display a button
-     autoload: false
-
+    uid: MTAyMC80Njc4NC8yMzI4NQ==
+    #   # LiveRe script, default to `https://cdn-city.livere.com/js/embed.dist.js`
+    script: https://cdn-city.livere.com/js/embed.dist.js
+    #   # Autoload, default to `true`, set to `false` to display a button
+    autoload: true
 
 # ---------------------------------------------------------------
 # Misc
@@ -372,7 +362,6 @@ pwa:
   #     - name: json
   #       strategy: cacheFirst
   #       regex: your_data_prefix/.*\\.json
-
   # manifest.json
   # manifest:
   #   short_name:
@@ -387,7 +376,6 @@ pwa:
   #     - src: icon-144x144.png
   #       sizes: 144x144
   #       type: image/png
-
 # Plugins
 # Inject html snippet to a specified position, Or global inject scripts/styles.
 # The code will take advantage of babel, uglifyjs and html-minifier if possible.
@@ -395,22 +383,25 @@ pwa:
 # ```bash
 # npm install babel-core babel-preset-env html-minifier uglify-js --save
 # ```
-# plugins:
-#   # Dynamic inject html snippet
-#   - position: # `sidebar` | `post` | `page` | `comments` | `avatar`, can be an array
+plugins:
+  # Dynamic inject html snippet
+  #   - position: # `sidebar` | `post` | `page` | `comments` | `avatar`, can be an array
 
-#     # HTML code
-#     template: |
-#       <script>...</script>
-#     # Or a path relative to theme folder
-#     template: snippets/snippet-1.html
+  #     # HTML code
+  #     template: |
+  #       <script>...</script>
+  #     # Or a path relative to theme folder
+  #     template: snippets/snippet-1.html
 
-#   # Global Inject scripts/styles
-#   # scripts will be injected into <body>, and styles will be injected into <head>
-#   # In general, script or style depends on their ext name.
-#   - //xxx.css
-#   - //xxx.js
-
+  #   # Global Inject scripts/styles
+  #   # scripts will be injected into <body>, and styles will be injected into <head>
+  #   # In general, script or style depends on their ext name.
+  #   - //xxx.css
+  - https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
+  - https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js
+  - /assets/autoload.min.js
+  - /assets/main.min.css
+  - /assets/main.min.js
 #   # A few more flexible examples
 
 #   # <script src="//sample.com/api.php?format=jsonp" id="sample-api" defer></script>
