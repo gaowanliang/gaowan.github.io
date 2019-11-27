@@ -2,6 +2,9 @@
     .abc {
         fill: #363636
     }
+    .abc:hover {
+        fill: #8e44ad
+    }
 }
 
 @media screen and (max-width: 676px) {

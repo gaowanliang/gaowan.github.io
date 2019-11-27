@@ -61,4 +61,8 @@ apt install git
 
 ## 把你的博客源文件上传Github
 
-为了多端同步，也为了防止
+为了多端同步，也为了防止服务器不好上传你的文件，这个时候就需要将你的博客的源文件文件上传到GitHub，由于Hexo会吃掉你博客的master分支，这个时候就需要先创建一个分支。在你博客源文件的文件夹下打开Git bash，输入下面的命令
+```bash
+git checkout -b inside
+```
+这样就创建了一个inside分支，因为我这个博客的主题就是inside。然后`git push`到GitHub上，这边的工作就完成了。

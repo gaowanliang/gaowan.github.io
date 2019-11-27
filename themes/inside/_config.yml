@@ -11,12 +11,12 @@ appearance:
   # Border color, default '#e0e0e0'
   border_color: 
   # body background, default '#f5f7fa'
-  background: "https://cdn.jsdelivr.net/gh/gaowanliang/p/img/wl.png"
+  background: "https://i.loli.net/2019/11/23/MoFh38CQDgpeSLW.png"
 
   # Sidebar background (when opened), default to accent_color
   sidebar_background: 
   # Card background, default '#fff'
-  card_background: "#FCFDFC"
+  card_background: "#f6f6f6"
 
   # All background settings above support image, e.g.,
   # '//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png #f5f7fa' or
