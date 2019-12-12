@@ -11,7 +11,7 @@ appearance:
   # Border color, default '#e0e0e0'
   border_color: 
   # body background, default '#f5f7fa'
-  background: "https://i.loli.net/2019/11/23/MoFh38CQDgpeSLW.png"
+  background: "https://cdn.jsdelivr.net/gh/gaowanliang/p/img/2.png"
 
   # Sidebar background (when opened), default to accent_color
   sidebar_background: 
@@ -88,7 +88,7 @@ profile:
   email: false
 
   # You can set Avatar URL directly
-  avatar: media/logo.png
+  avatar: https://cdn.jsdelivr.net/gh/gaowanliang/p/img/tx.png
 
   bio: 私、気になります(我很好奇).
 
@@ -113,7 +113,7 @@ sns:
   twitter:
   facebook:
   instagram:
-  tumblr:
+  tumblr: wechat-subscription
   dribbble:
   telegram:
   youtube:
@@ -318,7 +318,7 @@ data_prefix:
 data_dir:
 
 # Favicon, default to `favicon.ico`
-favicon: media/favicon.ico
+favicon: https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico
 
 # Google analytics
 ga: UA-145667660-3
@@ -399,9 +399,9 @@ plugins:
   #   - //xxx.css
   - https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
   - https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js
-  - /assets/autoload.min.js
-  - /assets/main.min.css
-  - /assets/main.min.js
+  - https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/assets/autoload.min.js
+  - https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/assets/main.min.css
+  - https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/assets/main.min.js
 #   # A few more flexible examples
 
 #   # <script src="//sample.com/api.php?format=jsonp" id="sample-api" defer></script>

@@ -5,7 +5,7 @@ toc: true
 date: 2019-11-22 18:32:56
 tags: Go
 categories: Go
-thumbnail: https://i.loli.net/2019/11/22/5nYAWUlS1ZfFrTN.jpg
+thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/wallhaven-md3wd9.jpg'
 ---
 
 先把坑开了，到时候再填

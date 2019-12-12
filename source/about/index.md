@@ -6,7 +6,7 @@ toc: false
 ---
 ## 一、基本信息
 <div>
-<img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/logo.png" width = "100" height = "100" div align=right />
+<img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/tx.png" width = "100" height = "100" div align=right />
 
 昵称：高玩梁
 

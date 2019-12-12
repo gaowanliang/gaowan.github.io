@@ -9,7 +9,7 @@ tags:
     - jsproxy
     - 前端代理
 categories: 代理
-thumbnail: 'https://i.loli.net/2019/11/22/aI4SrFWthNkX3Zf.jpg'
+thumbnail: https://cdn.jsdelivr.net/gh/gaowanliang/p/img/wallhaven-838p12.jpg
 ---
 # Cloudflare Worker+jsproxy实现浏览器代理访问谷歌
 

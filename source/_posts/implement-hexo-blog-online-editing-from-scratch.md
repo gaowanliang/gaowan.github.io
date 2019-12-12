@@ -65,4 +65,21 @@ apt install git
 ```bash
 git checkout -b inside
 ```
-这样就创建了一个inside分支，因为我这个博客的主题就是inside。然后`git push`到GitHub上，这边的工作就完成了。
+这样就创建了一个inside分支，因为我这个博客的主题就是inside。然后`git push`到GitHub上，本地这边的工作就完成了。
+
+## 在服务器上把你的源代码clone下来
+由于服务器是全新的，我就按全新的来说，首先输入下面命令：
+```bash
+git config --global user.name "你GitHub的用户名"
+
+git config --global user.email "你GitHub注册时用的邮箱"
+
+ssh-keygen -t rsa -C "你GitHub注册时用的邮箱"
+```
+默认回车即可，然后输入`cat /root/.ssh/id_rsa.pub`，然后把输出的东西整个复制出来
+![](https://cdn.jsdelivr.net/gh/gaowanliang/p/img/20191127204816.png)
+打开[github](https://github.com)，在头像下面点击`settings`，再点击`SSH and GPG keys`，新建一个SSH，Title随便。
+
+把刚才输出的一串复制到key里即可
+
+输入`ssh -T git@github.com`，问Are you sure you want to continue connecting (yes/no)?时输入yes，如果出现你的用户名，那就成功了。
