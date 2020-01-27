@@ -62,28 +62,7 @@ npm config set registry https://registry.npm.taobao.org
 
 首先右键打开git bash，然后输入下面命令：
 ```bash
-git config --global user.name "你的用户名"
-
-git config --global user.email "你注册时用的邮箱"
-```
-
-用户名和邮箱根据你注册github的信息自行修改。
-
-然后生成密钥SSH key：
-
-```bash
-ssh-keygen -t rsa -C "你注册时用的邮箱"
-```
-
-**问enter file in which....时输入 ./ssh (不要忘了最前面的点)**
-
-
-打开[github](https://github.com)，在头像下面点击`settings`，再点击`SSH and GPG keys`，新建一个SSH，名字随便。
-
-打开文件夹下的ssh.pub文件，复制到key里即可
-
-
-输入`ssh -T git@github.com -i ./ssh`，如果出现你的用户名，那就成功了。
+。
 
 
 打开博客根目录下的`_config.yml`文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。
