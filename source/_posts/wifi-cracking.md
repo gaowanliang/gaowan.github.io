@@ -4,6 +4,7 @@ reward: true
 toc: true
 date: 2020-01-24 17:49:59
 tags: 网络安全
+thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/75057185_p0.jpg'
 ---
 # Wi-Fi 破解
 
