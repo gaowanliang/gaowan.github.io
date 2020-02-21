@@ -20,13 +20,13 @@ window.live2d_settings = Array(); /*
 
 
 // 后端接口
-live2d_settings['modelAPI'] = '//live2d.fghrsh.net/api/';   // 自建 API 修改这里
+live2d_settings['modelAPI'] = '//api.gwl6.vip/';   // 自建 API 修改这里
 live2d_settings['tipsMessage'] = 'waifu-tips.json';            // 同目录下可省略路径
 live2d_settings['hitokotoAPI'] = 'lwl12.com';                  // 一言 API，可选 'lwl12.com', 'hitokoto.cn', 'jinrishici.com'(古诗词)
 
 // 默认模型
 live2d_settings['modelId'] = 1;            // 默认模型 ID，可在 F12 控制台找到
-live2d_settings['modelTexturesId'] = 53;           // 默认材质 ID，可在 F12 控制台找到
+live2d_settings['modelTexturesId'] = 68;           // 默认材质 ID，可在 F12 控制台找到
 
 // 工具栏设置
 live2d_settings['showToolMenu'] = true;         // 显示 工具栏          ，可选 true(真), false(假)

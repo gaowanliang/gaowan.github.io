@@ -458,7 +458,7 @@ plugins:
   #   - //xxx.css
   - https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
   - https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js
-  - https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/assets/autoload.min.js
+  - /assets/autoload.min.js
   - https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/assets/main.min.css
   - https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/assets/main.min.js
 #   # A few more flexible examples
