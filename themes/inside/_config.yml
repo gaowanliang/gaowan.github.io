@@ -5,16 +5,16 @@
 # Appearance
 appearance:
   # Accent color, default '#2a2b33'
-  accent_color: '#8e44ad'
+  accent_color: "#8e44ad"
   # Font color, default '#363636'
-  foreground_color: 
+  foreground_color:
   # Border color, default '#e0e0e0'
-  border_color: 
+  border_color:
   # body background, default '#f5f7fa'
   background: "https://cdn.jsdelivr.net/gh/gaowanliang/p/img/2.png"
 
   # Sidebar background (when opened), default to accent_color
-  sidebar_background: 
+  sidebar_background:
   # Card background, default '#fff'
   card_background: "#f6f6f6"
 
@@ -29,7 +29,7 @@ appearance:
   font:
     # Url of font css file
     # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
-    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat|Noto+Sans+SC
+    url: /assets/css.css
 
     # Base font which applied to body
     base: "'Josefin Sans', 'Noto Sans SC'"
@@ -202,8 +202,7 @@ search:
     # 搜索结果分页大小，缺省值 `10`
     per_page: 5
 
-  # 自定义搜索 API
-
+    # 自定义搜索 API
 
     # 用于统一数据格式，例如有如下返回结果
     # {
@@ -234,9 +233,6 @@ search:
       # title 对应具体某一条的内容字段
       content: _snippetResult.content.value
 
-
-
-  
   # Display a quick search button in fab
   # fab: true
   # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
