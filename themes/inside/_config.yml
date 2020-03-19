@@ -96,7 +96,7 @@ profile:
 menu:
   🏠 Home: /
   🎻 About: /about
-  📝 Edit: https://code.gwl6.vip/?folder=vscode-remote%3A%2F%2F127.0.0.1%3A9900%2Fopt%2Fgaowanliang.github.io
+  📝 Edit: /edit
   # About: /about
   # Links: /links
   Github: https://github.com/gaowanliang
