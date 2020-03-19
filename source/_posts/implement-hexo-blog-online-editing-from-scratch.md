@@ -13,7 +13,7 @@ categories: 博客
 ![](https://i.loli.net/2019/11/19/gW7O9TXAD1PMZiY.png)
 不过这个优惠券只能购买没有优惠过的服务器，所以1k优惠券也是了了，最后在我的精打细算下，买了一年零三个月的服务器。买来不能闲置着不用啊，于是我准备构建一个在线写hexo的平台，这样就可以摆脱平台的束缚，在任意环境下都可以进行写作了。由于这个服务器是新购置的，所以我从零开始写一下相关的内容。
 # 配置相关环境
-## Nignx
+## ~~Nignx~~(Nginx比较麻烦，下面更新caddy的)
 配置Nignx是关键，虽然很俗，但是这个活不能不干。其实也可以有很多选择，比如Caddy，~~Apache~~（这年头个人搭建网站还有人用Apache吗，配置巨麻烦）
 
 Debian apt 自带的 Nginx 太老，可以通过更新源的方式来解决
@@ -51,6 +51,8 @@ nvm install 12.13.0
 
 ![](https://i.loli.net/2019/11/19/CN5elIwdTfQYVmZ.png)
 
+
+
 ## git
 git 直接用 apt 安装就行了，这个不再赘述。
 ```bash
@@ -65,6 +67,7 @@ apt install git
 ```bash
 git checkout -b inside
 ```
+
 这样就创建了一个inside分支，因为我这个博客的主题就是inside。然后`git push`到GitHub上，本地这边的工作就完成了。
 
 ## 在服务器上把你的源代码clone下来
@@ -83,3 +86,12 @@ ssh-keygen -t rsa -C "你GitHub注册时用的邮箱"
 把刚才输出的一串复制到key里即可
 
 输入`ssh -T git@github.com`，问Are you sure you want to continue connecting (yes/no)?时输入yes，如果出现你的用户名，那就成功了。
+
+
+```bash
+git config --system user.name "你GitHub的用户名"
+
+git config --system user.email "你GitHub注册时用的邮箱"
+
+ssh-keygen -t rsa -C "你GitHub注册时用的邮箱"
+```
