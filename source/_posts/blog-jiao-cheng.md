@@ -121,7 +121,9 @@ repository修改为你自己的github项目地址。
 
 ## 下载我弄好的主题包
 
-大家也可以先用上文hexo安装方法安装完hexo，然后直接[下载这个文件](https://cdn.jsdelivr.net/gh/gaowanliang/gitment-store/hexo-theme-matery.zip)，放到theme文件夹里，这是我修改完的基本没bug的定制化的博客，且用了[这篇博客](http://www.gwl6.me/2019/09/30/jia-su-github-pages-wang-zhan/)里说的加速方式，就不用你自己搞了，就可以直接拿来用啦。
+**此主题包已失效，请直接去下载作者的主题包**
+
+~~大家也可以先用上文hexo安装方法安装完hexo，然后直接[下载这个文件](https://cdn.jsdelivr.net/gh/gaowanliang/gitment-store/hexo-theme-matery.zip)，放到theme文件夹里，这是我修改完的基本没bug的定制化的博客，且用了[这篇博客](http://www.gwl6.me/2019/09/30/jia-su-github-pages-wang-zhan/)里说的加速方式，就不用你自己搞了，就可以直接拿来用啦。~~
 
 ## 其他定制选项
 可以看主题包作者写的[这个](https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md)
