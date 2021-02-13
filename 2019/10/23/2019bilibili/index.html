@@ -1,52 +1,295 @@
 <!doctype html>
-<html lang="zh-Hans">
-<head>
-<meta charset="utf-8">
-<title>B站2019秋招编程题 - 高玩梁的博客</title>
-<base href="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="https://gwliang.com/2019/10/23/2019bilibili/">
-<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico">
-
-<meta name="description" content="B站在牛客网（ https:&#x2F;&#x2F;www.nowcoder.com&#x2F;test&#x2F;16519291&#x2F;summary ） 上发了一套自己秋招的编程题，恰好今年被老师忽悠着去再参加一次蓝桥杯（我参加C++组，所以下面的题都是用C++做的，没用我熟悉的python），虽然那个比赛很水，但是还是要提高我的编程能力才是。于是准备做点题练习下，B站这个题挺好，题目很新颖（仅限题目描述），不过内容和那个比赛一样水，所">
-<meta property="og:type" content="website">
-<meta property="og:title" content="B站2019秋招编程题">
-<meta property="og:url" content="https://gwliang.com/2019/10/23/2019bilibili/index.html">
-<meta property="og:site_name" content="高玩梁的博客">
-<meta property="og:description" content="B站在牛客网（ https:&#x2F;&#x2F;www.nowcoder.com&#x2F;test&#x2F;16519291&#x2F;summary ） 上发了一套自己秋招的编程题，恰好今年被老师忽悠着去再参加一次蓝桥杯（我参加C++组，所以下面的题都是用C++做的，没用我熟悉的python），虽然那个比赛很水，但是还是要提高我的编程能力才是。于是准备做点题练习下，B站这个题挺好，题目很新颖（仅限题目描述），不过内容和那个比赛一样水，所">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/tx.png">
-<meta property="article:published_time" content="2019-10-23T12:21:53.000Z">
-<meta property="article:modified_time" content="2019-11-17T00:48:45.195Z">
-<meta property="article:author" content="Gaowan Liang">
-<meta property="article:tag" content="哔哩哔哩">
-<meta property="article:tag" content="秋招">
-<meta property="article:tag" content="算法">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/tx.png">
-
-
-<link href="/assets/css.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/assets/main.min.css" rel="stylesheet">
-<link href="/styles.e4da61f53c7bc99becf4.css" rel="stylesheet">
-
-<link rel="stylesheet" href="/theme.d6b64d60c92bf0b2e1c9.css">
-
-
-<script src="/config.2f762d5858def7622f58.js"></script>
-
-
-<script async src="//www.googletagmanager.com/gtag/js?id=UA-158371937-1"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-158371937-1');</script>
-
-<meta name="generator" content="Hexo 4.2.1"></head>
-<body lang="zh-Hans">
-<is-a></is-a>
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="/assets/autoload.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/gaowanliang/gaowanliang.github.io/assets/main.min.js"></script>
-<script src="/runtime.ee6f73bc31187f12810a.js"></script>
-<script src="/polyfills.14df1390f4da8e838f05.js"></script>
-<script src="/main.d458ff11c3565b982fe7.js"></script>
-</body>
-</html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>B站2019秋招编程题 - 高玩梁的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="高玩梁的博客"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="高玩梁的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="B站在牛客网（ https:&amp;#x2F;&amp;#x2F;www.nowcoder.com&amp;#x2F;test&amp;#x2F;16519291&amp;#x2F;summary ）上发了一套自己秋招的编程题，恰好今年被老师忽悠着去再参加一次蓝桥杯（我参加C++组，所以下面的题都是用C++做的，没用我熟悉的python），虽然那个比赛很水，但是还是要提高我的编程能力才是。于是准备做点题练习下，B站这个题挺好，题目很新颖（仅限题目描述），不过内容和那个比赛一样水，所以"><meta property="og:type" content="blog"><meta property="og:title" content="B站2019秋招编程题"><meta property="og:url" content="https://gwliang.com/2019/10/23/2019bilibili/"><meta property="og:site_name" content="高玩梁的博客"><meta property="og:description" content="B站在牛客网（ https:&amp;#x2F;&amp;#x2F;www.nowcoder.com&amp;#x2F;test&amp;#x2F;16519291&amp;#x2F;summary ）上发了一套自己秋招的编程题，恰好今年被老师忽悠着去再参加一次蓝桥杯（我参加C++组，所以下面的题都是用C++做的，没用我熟悉的python），虽然那个比赛很水，但是还是要提高我的编程能力才是。于是准备做点题练习下，B站这个题挺好，题目很新颖（仅限题目描述），不过内容和那个比赛一样水，所以"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://i0.hdslb.com/bfs/article/b3688094c946e80621c9aeddea1af65114bcc717.png"><meta property="og:image" content="https://i0.hdslb.com/bfs/article/3231b98c148b9c98556239e35551d0267723bad2.png"><meta property="og:image" content="https://i0.hdslb.com/bfs/article/d434d8a0a72d5be696509fd514a3f559c44d1e4a.png"><meta property="og:image" content="https://i0.hdslb.com/bfs/article/c3620b6cb4835cda3b98a43a1e3cbbfc8126d40e.png"><meta property="og:image" content="https://i0.hdslb.com/bfs/article/b0c8293b0b7cf2342bf718d6688d72b63a629ee2.png"><meta property="og:image" content="https://i0.hdslb.com/bfs/article/1d40fc7c91688baa999c7dc02c3de95f02acfeb6.png"><meta property="article:published_time" content="2019-10-23T12:21:53.000Z"><meta property="article:modified_time" content="2021-02-13T08:40:31.967Z"><meta property="article:author" content="Gaowan Liang"><meta property="article:tag" content="哔哩哔哩"><meta property="article:tag" content="秋招"><meta property="article:tag" content="算法"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://i0.hdslb.com/bfs/article/b3688094c946e80621c9aeddea1af65114bcc717.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://gwliang.com/2019/10/23/2019bilibili/"},"headline":"高玩梁的博客","image":["https://i0.hdslb.com/bfs/article/b3688094c946e80621c9aeddea1af65114bcc717.png","https://i0.hdslb.com/bfs/article/3231b98c148b9c98556239e35551d0267723bad2.png","https://i0.hdslb.com/bfs/article/d434d8a0a72d5be696509fd514a3f559c44d1e4a.png","https://i0.hdslb.com/bfs/article/c3620b6cb4835cda3b98a43a1e3cbbfc8126d40e.png","https://i0.hdslb.com/bfs/article/b0c8293b0b7cf2342bf718d6688d72b63a629ee2.png","https://i0.hdslb.com/bfs/article/1d40fc7c91688baa999c7dc02c3de95f02acfeb6.png"],"datePublished":"2019-10-23T12:21:53.000Z","dateModified":"2021-02-13T08:40:31.967Z","author":{"@type":"Person","name":"Gaowan Liang"},"description":"B站在牛客网（ https:&#x2F;&#x2F;www.nowcoder.com&#x2F;test&#x2F;16519291&#x2F;summary ）上发了一套自己秋招的编程题，恰好今年被老师忽悠着去再参加一次蓝桥杯（我参加C++组，所以下面的题都是用C++做的，没用我熟悉的python），虽然那个比赛很水，但是还是要提高我的编程能力才是。于是准备做点题练习下，B站这个题挺好，题目很新颖（仅限题目描述），不过内容和那个比赛一样水，所以"}</script><link rel="canonical" href="https://gwliang.com/2019/10/23/2019bilibili/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=UA-158371937-1" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-158371937-1');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico" alt="高玩梁的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-10-23T12:21:53.000Z" title="2019-10-23 20:21:53">2019-10-23</time>发表</span><span class="level-item"><time dateTime="2021-02-13T08:40:31.967Z" title="2021-2-13 16:40:31">2021-02-13</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span><span class="level-item">29 分钟读完 (大约4373个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">B站2019秋招编程题</h1><div class="content"><p>B站在牛客网（ <a target="_blank" rel="noopener" href="https://www.nowcoder.com/test/16519291/summary">https://www.nowcoder.com/test/16519291/summary</a> ）<br>上发了一套自己秋招的编程题，恰好今年被老师忽悠着去再参加一次蓝桥杯（我参加C++组，所以下面的题都是用C++做的，没用我熟悉的python），虽然那个比赛很水，但是还是要提高我的编程能力才是。于是准备做点题练习下，B站这个题挺好，题目很新颖（仅限题目描述），不过内容和那个比赛一样水，所以给大家解析下。</p>
+<h1 id="1-扭蛋机-answer"><a href="#1-扭蛋机-answer" class="headerlink" title="1.扭蛋机 answer"></a>1.扭蛋机 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/9d26441a396242a9a0f7d2106fc130c7">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>22娘和33娘接到了小电视君的扭蛋任务：<br>一共有两台扭蛋机，编号分别为扭蛋机2号和扭蛋机3号，22娘使用扭蛋机2号，33娘使用扭蛋机3号。<br>扭蛋机都不需要投币，但有一项特殊能力：<br>扭蛋机2号：如果塞x（x范围为&gt;=0正整数）个扭蛋进去，然后就可以扭到2x+1个<br>扭蛋机3号：如果塞x（x范围为&gt;=0正整数）个扭蛋进去，然后就可以扭到2x+2个<br>22娘和33娘手中没有扭蛋，需要你帮她们设计一个方案，两人“轮流扭”（谁先开始不限，扭到的蛋可以交给对方使用），用“最少”的次数，使她们能够最后恰好扭到N个交给小电视君。</p>
+<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>输入一个正整数，表示小电视君需要的N个扭蛋。</p>
+</blockquote>
+<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>输出一个字符串，每个字符表示扭蛋机，字符只能包含”2”和”3”。</p>
+</blockquote>
+<h3 id="输入例子1"><a href="#输入例子1" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>10</p>
+</blockquote>
+<h3 id="输出例子1"><a href="#输出例子1" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>233</p>
+</blockquote>
+<p>思路有两种，一种是BFS，一种是通过二叉树（其实你看到2x+1和2x+2就差不多知道了），因为这个题是这样的：</p>
+<p><img src="https://i0.hdslb.com/bfs/article/b3688094c946e80621c9aeddea1af65114bcc717.png"></p>
+<p>可以看到，n是奇数都是最后22扭的，n是偶数都是最后33扭的，那么我们就可以倒着找出最终的顺序。找到下一层之后返回上一层，如果是奇数就是(n-1)/2,偶数就是(n-2)/2，具体可自行验证。给出C++的示例代码：</p>
+<p><img src="https://i0.hdslb.com/bfs/article/3231b98c148b9c98556239e35551d0267723bad2.png"></p>
+<h1 id="2-脸滚键盘-answer"><a href="#2-脸滚键盘-answer" class="headerlink" title="2.脸滚键盘 answer"></a>2.脸滚键盘 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/2a3dc06f337d4a2ba41d25c688f95e2f">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/av394281">av394281</a> 中，充满威严的蕾米莉亚大小姐因为触犯某条禁忌，被隙间妖怪八云紫（紫m……èi）按住头在键盘上滚动。<br>同样在弹幕里乱刷梗被紫姐姐做成罪袋的你被指派找到大小姐脸滚键盘打出的一行字中的第 <code>k</code> 个仅出现一次的字。<br>(为简化问题，大小姐没有滚出 ascii 字符集以外的字)</p>
+<h3 id="输入描述-1"><a href="#输入描述-1" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>每个输入都有若干行，每行的第一个数字为<code>k</code>，表示求第<code>k</code>个仅出现一次的字。然后间隔一个半角空格，之后直到行尾的所有字符表示大小姐滚出的字符串<code>S</code>。</p>
+</blockquote>
+<h3 id="输出描述-1"><a href="#输出描述-1" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>输出的每一行对应输入的每一行的答案，如果无解，输出字符串<code>Myon~</code><br><br>(请不要输出多余的空行）<br><br>为了方便评测，如果答案存在且为c，请输出[c]</p>
+</blockquote>
+<h3 id="输入例子1-1"><a href="#输入例子1-1" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>2 misakamikotodaisuki<br>3 !bakabaka~ bakabaka~ 1~2~9!<br>3 3.1415926535897932384626433832795028841971693993751o582097494459211451488946419191919l91919hmmhmmahhhhhhhhhh<br>7 <a target="_blank" rel="noopener" href="http://www.bilibili.com/av170001/">www.bilibili.com/av170001\</a><br>1 111</p>
+</blockquote>
+<h3 id="输出例子1-1"><a href="#输出例子1-1" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>[d]<br>[9]<br>[l]<br>[7]<br>Myon~</p>
+</blockquote>
+<p>这个题有几种思路，最简单的还是使用映射(map)，让出现的每个字符对应到0上。扫描整个字符串，如果碰到一个字符，就让他对应的数+1，同时记录每个字符出现的顺序。然后扫描记录的顺序，找到第k个对应数是1的字符。但是我们看到题目说的是不超过ASCII，所以直接用ASCII来映射就好了，给出示例C++代码：<br><img src="https://i0.hdslb.com/bfs/article/d434d8a0a72d5be696509fd514a3f559c44d1e4a.png"></p>
+<h1 id="3-简单表达式计算-answer"><a href="#3-简单表达式计算-answer" class="headerlink" title="3.简单表达式计算 answer"></a>3.简单表达式计算 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/6221faa383fc49f1b10dffcb62c866bf">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>给定一个合法的表达式字符串，其中只包含非负整数、加法、减法以及乘法符号（不会有括号），例如7+3*4*5+2+4-3-1，请写程序计算该表达式的结果并输出；</p>
+<h3 id="输入描述-2"><a href="#输入描述-2" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>输入有多行，每行是一个表达式，输入以END作为结束</p>
+</blockquote>
+<h3 id="输出描述-2"><a href="#输出描述-2" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>每行表达式的计算结果</p>
+</blockquote>
+<h3 id="输入例子1-2"><a href="#输入例子1-2" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>7+3*4*5+2+4-3-1<br>2-3*1<br>END</p>
+</blockquote>
+<h3 id="输出例子1-2"><a href="#输出例子1-2" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>69<br>-1</p>
+</blockquote>
+<h1 id="4-小A最多会新认识的多少人-answer"><a href="#4-小A最多会新认识的多少人-answer" class="headerlink" title="4.小A最多会新认识的多少人 answer"></a>4.小A最多会新认识的多少人 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/1fe6c3136d2a45fa8ef555b459b6dd26">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>小A参加了一个n人的活动，每个人都有一个唯一编号<code>i</code>(<code>i&gt;=0 &amp; i&lt;n</code>)，其中<code>m</code>对相互认识，在活动中两个人可以通过互相都认识的一个人介绍认识。现在问活动结束后，小A最多会认识多少人？</p>
+<h3 id="输入描述-3"><a href="#输入描述-3" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>第一行聚会的人数：n（n&gt;=3 &amp; n&lt;10000）；<br>第二行小A的编号: ai（ai &gt;= 0 &amp; ai &lt; n)；<br>第三互相认识的数目: m（m&gt;=1 &amp; m<br>&lt; n(n-1)/2）；<br>第4到m+3行为互相认识的对，以’,’分割的编号。</p>
+</blockquote>
+<h3 id="输出描述-3"><a href="#输出描述-3" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>输出小A最多会新认识的多少人？</p>
+</blockquote>
+<h3 id="输入例子1-3"><a href="#输入例子1-3" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>7<br>5<br>6<br>1,0<br>3,1<br>4,1<br>5,3<br>6,1<br>6,5</p>
+</blockquote>
+<h3 id="输出例子1-3"><a href="#输出例子1-3" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>3</p>
+</blockquote>
+<p>这个题很明显的并查集，但是据其他人说用邻接表+BFS也能做，但是这里我就不尝试了，给出并查集（最后要记得减去小A本来就认识的人）的C++示例代码：</p>
+<p><img src="https://i0.hdslb.com/bfs/article/c3620b6cb4835cda3b98a43a1e3cbbfc8126d40e.png"></p>
+<h1 id="5-山寨金闪闪-answer"><a href="#5-山寨金闪闪-answer" class="headerlink" title="5.山寨金闪闪 answer"></a>5.山寨金闪闪 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/9363dcb83ca44c61a2c1a8f65aa722b8">answer</a></h1><blockquote>
+<p>时间限制：3秒<br>空间限制：262144K</p>
+</blockquote>
+<p>金闪闪死后，红A拿到了王之财宝，里面有n个武器，长度各不相同。红A发现，拿其中三件武器首尾相接，组成一个三角形，进行召唤仪式，就可以召唤出一个山寨金闪闪。（例如，三件武器长度为10、15、20，可以召唤成功。若长度为10、11、30，首尾相接无法组成三角形，召唤失败。）红A于是开了一个金闪闪专卖店。他把王之财宝排成一排，每个客人会随机抽取到一个区间[l,r],客人可以选取区间里的三件武器进行召唤（客人都很聪慧，如果能找出来合适的武器，一定不会放过）。召唤结束后，客人要把武器原样放回去。m个客人光顾以后，红A害怕过多的金闪闪愉悦太多男人，于是找到了你，希望你帮他统计出有多少山寨金闪闪被召唤出来。</p>
+<h3 id="输入描述-4"><a href="#输入描述-4" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>第一行武器数量:n &lt;= 1*10^7<br>第二行空格分隔的n个int，表示每件武器的长度。<br>第三行顾客数量：m &lt;= 1*10^6<br>后面m行，每行两个int l，r，表示每个客人被分配到的区间。（l&lt;r）</p>
+</blockquote>
+<h3 id="输出描述-4"><a href="#输出描述-4" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>山寨金闪闪数量。</p>
+</blockquote>
+<h3 id="输入例子1-4"><a href="#输入例子1-4" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>5<br>1 10 100 95 101<br>4<br>1 3<br>2 4<br>2 5<br>3 5</p>
+</blockquote>
+<h3 id="输出例子1-4"><a href="#输出例子1-4" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>3</p>
+</blockquote>
+<p>我知道这是《Fate》系列作品的衍生题目，我不玩游戏，但是咱也知道金闪闪是男的，为什么偷♂税男人啦。不过这个题很有说头，思路可以分为这几步：</p>
+<p>1，首先，判断三个正整数a,b,c是否能组成三角形，判断方法是：将abc升序排列，然后如果a+b&gt;c,则可以构成三角形。其次，判断一个区间[L,R]内是否能找到三个数使其构成三角形，可以将这R-L+1个元素取出并排序，然后从前往后三个三个判断。查询每次区间长度都在1~1e7之间，当然不能每次都暴力找，不然有1e6次查询，时间复杂度肯定爆炸，那么怎么处理呢？实际上，如果数一多，是非常容易构成三角形的，如果要刚好卡到边界，刚好不能构造成三角形（a+b==c），则要构造这样的数据：1，1，2，3，5，8……。<br>巧了，其实就是斐波那契数列，题目的数据给出的数据在int范围内，然后我们发现大概在40多项的时候就不能构造出全都不满足构成三角形的数据了，下面是打表的出的结果。</p>
+<p><img src="https://i0.hdslb.com/bfs/article/b0c8293b0b7cf2342bf718d6688d72b63a629ee2.png"><br>int 的范围最大是2的32次方，也就是4294967296，到48项就超了，所以区间超过47必出金闪闪</p>
+<p>所以，只要在给出的区间长度较大的，一定能构成三角形，区间长度较小的，则可以存下来排序后判断，下面给出C++示例代码：</p>
+<p><img src="https://i0.hdslb.com/bfs/article/1d40fc7c91688baa999c7dc02c3de95f02acfeb6.png"></p>
+<p>作者：高玩梁<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv3831139">https://www.bilibili.com/read/cv3831139</a><br>出处： bilibili</p>
+<h1 id="6-比较两个版本字符串version1和version2-answer"><a href="#6-比较两个版本字符串version1和version2-answer" class="headerlink" title="6.比较两个版本字符串version1和version2 answer"></a>6.比较两个版本字符串version1和version2 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/521049ca23f147d698e1cff923c3262a">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>如果version1 &gt; version2 返回1，如果 version1 &lt; version2 返回-1，不然返回0.</p>
+<p>输入的version字符串非空，只包含数字和字符.。.字符不代表通常意义上的小数点，只是用来区分数字序列。例如字符串2.5并不代表二点五，只是代表版本是第一级版本号是2，第二级版本号是5.</p>
+<h3 id="输入描述-5"><a href="#输入描述-5" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>两个字符串，用空格分割。<br>每个字符串为一个version字符串，非空，只包含数字和字符.</p>
+</blockquote>
+<h3 id="输出描述-5"><a href="#输出描述-5" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>只能输出1, -1，或0</p>
+</blockquote>
+<h3 id="输入例子1-5"><a href="#输入例子1-5" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>0.1 1.1</p>
+</blockquote>
+<h3 id="输出例子1-5"><a href="#输出例子1-5" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>-1</p>
+</blockquote>
+<h1 id="7-精灵鼠从入口到出口的最少减少速度-answer"><a href="#7-精灵鼠从入口到出口的最少减少速度-answer" class="headerlink" title="7.精灵鼠从入口到出口的最少减少速度 answer"></a>7.精灵鼠从入口到出口的最少减少速度 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/6171d3a8748248248c21a3c8f330396d">answer</a></h1><blockquote>
+<p>时间限制：2秒<br>空间限制：131072K</p>
+</blockquote>
+<p>猛兽侠中精灵鼠在利剑飞船的追逐下逃到一个n*n的建筑群中，精灵鼠从（0,0）的位置进入建筑群，建筑群的出口位置为（n-1,n-1），建筑群的每个位置都有阻碍，每个位置上都会相当于给了精灵鼠一个固定值减速，因为精灵鼠正在逃命所以不能回头只能向前或者向下逃跑，现在问精灵鼠最少在减速多少的情况下逃出迷宫？</p>
+<h3 id="输入描述-6"><a href="#输入描述-6" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>第一行迷宫的大小: n &gt;=2 &amp; n &lt;= 10000；<br>第2到n+1行，每行输入为以’,’分割的该位置的减速,减速f &gt;=1 &amp; f &lt; 10。</p>
+</blockquote>
+<h3 id="输出描述-6"><a href="#输出描述-6" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>精灵鼠从入口到出口的最少减少速度？</p>
+</blockquote>
+<h3 id="输入例子1-6"><a href="#输入例子1-6" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>3<br>5,5,7<br>6,7,8<br>2,2,4</p>
+</blockquote>
+<h3 id="输出例子1-6"><a href="#输出例子1-6" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>19</p>
+</blockquote>
+<h1 id="8-顺时针打印数字矩阵-answer"><a href="#8-顺时针打印数字矩阵-answer" class="headerlink" title="8.顺时针打印数字矩阵 answer"></a>8.顺时针打印数字矩阵 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/ce0c22a435114108bd9acc75f81b5802">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>给定一个数字矩阵，请设计一个算法从左上角开始顺时针打印矩阵元素</p>
+<h3 id="输入描述-7"><a href="#输入描述-7" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>输入第一行是两个数字，分别代表行数M和列数N；接下来是M行，每行N个数字，表示这个矩阵的所有元素；当读到M=-1，N=-1时，输入终止。</p>
+</blockquote>
+<h3 id="输出描述-7"><a href="#输出描述-7" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>请按逗号分割顺时针打印矩阵元素（注意最后一个元素末尾不要有逗号！例如输出“1，2，3”，而不是“1，2，<br>3，”），每个矩阵输出完成后记得换行</p>
+</blockquote>
+<h3 id="输入例子1-7"><a href="#输入例子1-7" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>3 3<br>1 2 3<br>4 5 6<br>7 8 9<br>-1 -1</p>
+</blockquote>
+<h3 id="输出例子1-7"><a href="#输出例子1-7" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>1,2,3,6,9,8,7,4,5</p>
+</blockquote>
+<h1 id="9-写一段程序判断IP字符串是否属于内网IP-answer"><a href="#9-写一段程序判断IP字符串是否属于内网IP-answer" class="headerlink" title="9.写一段程序判断IP字符串是否属于内网IP answer"></a>9.写一段程序判断IP字符串是否属于内网IP <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/80ce674313ff43af9d7ac7a41ae21527">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>从业 666 年的 BILIBILI 网络安全工程师 KindMo 最近很困惑，公司有一个业务总是受到 SSRF 攻击。请帮他写一个程序，判断输入的字符串是否属于内网IP，用于防御该漏洞。<br>我们知道常见的内网IP有，127.0.0.1，192.168.0.1 等。</p>
+<h3 id="输入描述-8"><a href="#输入描述-8" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>每次输入仅包含一个IP字符串，即一个测试样例</p>
+</blockquote>
+<h3 id="输出描述-8"><a href="#输出描述-8" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>对于每个测试实例输出整数1或0，1代表True，即输入属于内网IP，0代表False，即输入不属于内网IP或不是IP字符串。</p>
+</blockquote>
+<h3 id="输入例子1-8"><a href="#输入例子1-8" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>42.96.146.169</p>
+</blockquote>
+<h3 id="输出例子1-8"><a href="#输出例子1-8" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>0</p>
+</blockquote>
+<h1 id="10-给定一个整数数组-判断其中是否有3个数和为N-answer"><a href="#10-给定一个整数数组-判断其中是否有3个数和为N-answer" class="headerlink" title="10.给定一个整数数组,判断其中是否有3个数和为N answer"></a>10.给定一个整数数组,判断其中是否有3个数和为N <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/b69c933c28164cbd8852820c16556a84">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：131072K</p>
+</blockquote>
+<p>给定一个整数数组,判断其中是否有3个数和为N</p>
+<h3 id="输入描述-9"><a href="#输入描述-9" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>输入为一行<br>逗号前为一个整数数组，每个元素间用空格隔开；逗号后为N</p>
+</blockquote>
+<h3 id="输出描述-9"><a href="#输出描述-9" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>输出bool值<br>True表示存在3个和为N的数<br>False表示不存在3个和为N的数\</p>
+</blockquote>
+<h3 id="输入例子1-9"><a href="#输入例子1-9" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>1 2 3 4 5,10</p>
+</blockquote>
+<h3 id="输出例子1-9"><a href="#输出例子1-9" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>True</p>
+</blockquote>
+<h1 id="11-实现一个HTML语法检查器-answer"><a href="#11-实现一个HTML语法检查器-answer" class="headerlink" title="11.实现一个HTML语法检查器 answer"></a>11.实现一个HTML语法检查器 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/bbe2e0eb156446fd9a8de997e9189fe9">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>实现一个HTML语法检查器。HTML语法规则简化如下：标签必须闭合，可以由开始和结束两个标签闭合，如<code>&lt;div&gt;&lt;/div&gt;</code>，也可以自闭合，<br>如<code>&lt;div /&gt;</code><br>标签可以嵌套如<code>&lt;div&gt;&lt;a&gt;&lt;/a&gt;&lt;/div&gt;</code>或者 <code>&lt;div&gt;&lt;a/&gt;&lt;/div&gt;</code>，但是标签不能交叉：<code>&lt;div&gt;&lt;a&gt;&lt;/div&gt;&lt;/a&gt;</code>是不允许的标签里可以有属性<br>如<code>&lt;div id=&quot;a&lt;1&quot;&gt;&lt;/div&gt;</code><br>属性的规则是name=”任意非引号字符”，多属性声明之间必须有空格，属性声明不符合规则时，整段HTML都算语法错误<br>输入文本只会出现字母a-z和&lt;&gt;”=<br>请用任意语言实现一个HTML语法检查器函数，有语法错误返回1，没有语法错误返回0</p>
+<h3 id="输入描述-10"><a href="#输入描述-10" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>一行，一个HTML字符串</p>
+</blockquote>
+<h3 id="输出描述-10"><a href="#输出描述-10" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>有语法错误返回1，没有语法错误返回0</p>
+</blockquote>
+<h1 id="12-孙悟空的徒弟-answer"><a href="#12-孙悟空的徒弟-answer" class="headerlink" title="12.孙悟空的徒弟 answer"></a>12.孙悟空的徒弟 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/7b841a840db64f5ebec77f6ee7e307e2">answer</a></h1><blockquote>
+<p>时间限制：3秒<br>空间限制：131072K</p>
+</blockquote>
+<p>打败魔人布欧以后，孙悟空收了n个徒弟，每个徒弟战斗力各不相同。他教导所有的徒弟和体术，合体后战斗力为原战斗力相乘。任何两个徒弟都可以合体，所以一共有n*(n-1)/2种合体徒弟。有一天，他想考验一下孙悟天战斗力如何，希望在所有n*(n-1)/2种合体徒弟中选择战斗力第k高的，与孙悟天对战。可是孙悟空徒弟太多了，他已然懵逼，于是找到了你，请你帮他找到对的人。</p>
+<h3 id="输入描述-11"><a href="#输入描述-11" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>第一行两个int。徒弟数量：n &lt;= 1*10^6；战斗力排名:k &lt;= n*(n-1)/2<br>第二行空格分隔n个int，表示每个徒弟的战斗力。</p>
+</blockquote>
+<h3 id="输出描述-11"><a href="#输出描述-11" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>战斗力排名k的合体徒弟战斗力。</p>
+</blockquote>
+<h3 id="输入例子1-10"><a href="#输入例子1-10" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>5 2<br>1 3 4 5 9</p>
+</blockquote>
+<h3 id="输出例子1-10"><a href="#输出例子1-10" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>36</p>
+</blockquote>
+<h1 id="13-翻转链表-answer"><a href="#13-翻转链表-answer" class="headerlink" title="13.翻转链表 answer"></a>13.翻转链表 <a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/f350f14cd22c41aabfa7e54a1b8e8825">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：32768K</p>
+</blockquote>
+<p>对于一个链表 L: L0→L1→…→Ln-1→Ln,<br>将其翻转成 L0→Ln→L1→Ln-1→L2→Ln-2→…</p>
+<p>输入是一串数字，请将其转换成单链表格式之后，再进行操作</p>
+<h3 id="输入描述-12"><a href="#输入描述-12" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>一串数字，用逗号分隔</p>
+</blockquote>
+<h3 id="输出描述-12"><a href="#输出描述-12" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>一串数字，用逗号分隔</p>
+</blockquote>
+<h3 id="输入例子1-11"><a href="#输入例子1-11" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>1,2,3,4,5</p>
+</blockquote>
+<h3 id="输出例子1-11"><a href="#输出例子1-11" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>1,5,2,4,3</p>
+</blockquote>
+<h1 id="14-ん…红茶？answer"><a href="#14-ん…红茶？answer" class="headerlink" title="14.ん…红茶？answer"></a>14.ん…红茶？<a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/14a045880df44cf79626f079bd9f07f1">answer</a></h1><blockquote>
+<p>时间限制：1秒<br>空间限制：131072K</p>
+</blockquote>
+<p>高贵的蕾米莉亚大小姐每天需要饮用定量 B 型血的红茶以保持威严，并且要分两杯在不同时段饮用。<br>女仆长十六夜咲夜每天可以制作很多杯不同剂量 B 型血的红茶供蕾米莉亚大小姐饮用。<br>某日，你和天才妖精琪露诺偷偷潜入红魔馆被咲夜抓住，要求在今日份的红茶中挑出所有满足大小姐要求的茶杯，否则……</p>
+<h3 id="输入描述-13"><a href="#输入描述-13" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>每个样例有三行输入，第一行输入表示茶杯个数，第二行输入表示每份茶杯里的 B 型血剂量，第三行表示大小姐今天的定量</p>
+</blockquote>
+<h3 id="输出描述-13"><a href="#输出描述-13" class="headerlink" title="输出描述:"></a>输出描述:</h3><blockquote>
+<p>对每一个样例，输出所有可能的搭配方案，如果有多种方案，请按每个方案的第一杯 B 型血剂量的大小升序排列。<br>如果无法找到任何一种满足大小姐的方案，输出”NO”(不包括引号)并换行。</p>
+</blockquote>
+<h3 id="输入例子1-12"><a href="#输入例子1-12" class="headerlink" title="输入例子1:"></a>输入例子1:</h3><blockquote>
+<p>7<br>2 4 6 1 3 5 7<br>7</p>
+</blockquote>
+<h3 id="输出例子1-12"><a href="#输出例子1-12" class="headerlink" title="输出例子1:"></a>输出例子1:</h3><blockquote>
+<p>1 6<br>2 5<br>3 4</p>
+</blockquote>
+</div><div class="article-licensing box"><div class="licensing-title"><p>B站2019秋招编程题</p><p><a href="https://gwliang.com/2019/10/23/2019bilibili/">https://gwliang.com/2019/10/23/2019bilibili/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Gaowan Liang</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2019-10-23</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-02-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/">哔哩哔哩</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%A7%8B%E6%8B%9B/">秋招</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/alipay.jpg" alt="支付宝"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/appreciates.jpg" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2019/11/04/Cloudflare_Worker_jsproxy/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Cloudflare Worker+jsproxy实现浏览器代理</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2019/10/05/blog-jiao-cheng/"><span class="level-item">高大上博客制作教程</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.2.5/dist/disqusjs.css"><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script src="https://cdn.jsdelivr.net/npm/disqusjs@1.2.5/dist/disqus.js"></script><script>new DisqusJS({
+            shortname: 'gao-wan-liang-de-bo-ke',
+            apikey: "l5cvmO9BAMueOLYMf33aFDrh5U5uC99lGFYYPR15o7539AY59IbWl3XffncrALD6",
+            siteName: "高玩梁的博客",
+            identifier: "2019/10/23/2019bilibili/",
+            url: "https://gwliang.com/2019/10/23/2019bilibili/",
+            title: "B站2019秋招编程题",
+            
+            
+            
+            
+        });</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/tx.png" alt="高玩梁"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">高玩梁</p><p class="is-size-6 is-block">私、気になります(我很好奇).</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>中国</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">26</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">20</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/gaowanliang" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/gaowanliang"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="QQ" href="https://jq.qq.com/?_wv=1027&amp;k=5HV4nXU"><i class="fab fa-qq"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/gaowanliang"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="wechat" href="https://dribbble.com"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://www.zhihu.com/people/gao-wan-liang-spl/activities"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2020/12/02/rclone-mount-gd/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/57883767_p0.png" alt="在Debian/Ubuntu上使用rclone挂载Google Drive网盘"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-12-02T02:56:07.000Z">2020-12-02</time></p><p class="title"><a href="/2020/12/02/rclone-mount-gd/">在Debian/Ubuntu上使用rclone挂载Google Drive网盘</a></p><p class="categories"><a href="/categories/rclone/">rclone</a> / <a href="/categories/rclone/Google-drive/">Google drive</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/11/22/batch-rename-file/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/72940468_p0.png" alt="如何优雅的批量重命名文件"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-11-22T04:53:47.000Z">2020-11-22</time></p><p class="title"><a href="/2020/11/22/batch-rename-file/">如何优雅的批量重命名文件</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/11/10/caddy2-install/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/2020-11-11_214037.jpg" alt="Caddy 2 简明教程"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-11-10T09:53:10.000Z">2020-11-10</time></p><p class="title"><a href="/2020/11/10/caddy2-install/">Caddy 2 简明教程</a></p><p class="categories"><a href="/categories/%E5%BB%BA%E7%AB%99/">建站</a> / <a href="/categories/%E5%BB%BA%E7%AB%99/Caddy/">Caddy</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/29/OneDriveUploader-use/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/64360477_p0.jpg" alt="OneDrive 上传工具 OneDriveUploader"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-29T11:36:03.000Z">2020-08-29</time></p><p class="title"><a href="/2020/08/29/OneDriveUploader-use/">OneDrive 上传工具 OneDriveUploader</a></p><p class="categories"><a href="/categories/OneDrive/">OneDrive</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/25/onelist-use/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/45504728_p0.png" alt="OneDrive目录列表OneList使用方法"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-25T13:41:36.000Z">2020-08-25</time></p><p class="title"><a href="/2020/08/25/onelist-use/">OneDrive目录列表OneList使用方法</a></p><p class="categories"><a href="/categories/OneDrive/">OneDrive</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Go/"><span class="level-start"><span class="level-item">Go</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Google-Drive/"><span class="level-start"><span class="level-item">Google Drive</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Google-Drive/Debian/"><span class="level-start"><span class="level-item">Debian</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Google-Drive/Debian/rclone/"><span class="level-start"><span class="level-item">rclone</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/OMNET/"><span class="level-start"><span class="level-item">OMNET++</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/OneDrive/"><span class="level-start"><span class="level-item">OneDrive</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/bitwarden/"><span class="level-start"><span class="level-item">bitwarden</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/rclone/"><span class="level-start"><span class="level-item">rclone</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/rclone/Google-drive/"><span class="level-start"><span class="level-item">Google drive</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E4%BB%A3%E7%90%86/"><span class="level-start"><span class="level-item">代理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%8A%A0%E9%80%9F/"><span class="level-start"><span class="level-item">加速</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%8D%9A%E5%AE%A2/"><span class="level-start"><span class="level-item">博客</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%B7%A5%E5%85%B7/"><span class="level-start"><span class="level-item">工具</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%BB%BA%E7%AB%99/"><span class="level-start"><span class="level-item">建站</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%BB%BA%E7%AB%99/Caddy/"><span class="level-start"><span class="level-item">Caddy</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%BB%BA%E7%AB%99/Caddy/%E8%BD%AC%E8%BD%BD/"><span class="level-start"><span class="level-item">转载</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/%E6%95%99%E7%A8%8B/"><span class="level-start"><span class="level-item">教程</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E6%95%99%E7%A8%8B/%E9%AA%8C%E8%AF%81%E7%A0%81/"><span class="level-start"><span class="level-item">验证码</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E6%95%99%E7%A8%8B/%E9%AA%8C%E8%AF%81%E7%A0%81/reCAPTCHA/"><span class="level-start"><span class="level-item">reCAPTCHA</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/%E7%AC%91%E8%AF%9D/"><span class="level-start"><span class="level-item">笑话</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/"><span class="level-start"><span class="level-item">虚拟内存</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Cloudflare/"><span class="tag">Cloudflare</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github-Pages/"><span class="tag">Github Pages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Go/"><span class="tag">Go</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OMNET/"><span class="tag">OMNET++</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SSL/"><span class="tag">SSL</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TicToc/"><span class="tag">TicToc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/jsdelivr/"><span class="tag">jsdelivr</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/jsproxy/"><span class="tag">jsproxy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%90%86/"><span class="tag">前端代理</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A0%E9%80%9F/"><span class="tag">加速</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%9A%E5%AE%A2/"><span class="tag">博客</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/"><span class="tag">哔哩哔哩</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A5%E5%85%B7/"><span class="tag">工具</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BB%BA%E7%AB%99/"><span class="tag">建站</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tag">教程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A7%8B%E6%8B%9B/"><span class="tag">秋招</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%91%E8%AF%9D/"><span class="tag">笑话</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><span class="tag">网络安全</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico" alt="高玩梁的博客" height="28"></a><p class="is-size-7"><span>&copy; 2021 Gaowan Liang</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
