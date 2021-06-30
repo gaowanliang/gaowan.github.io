@@ -3,6 +3,7 @@ title: Linux命令行下载OneDrive分享链接中的文件
 reward: true
 toc: true
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/20200518.png'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/20200518.png'
 date: 2020-05-26 22:24:24
 tags: 教程
 categories: OneDrive

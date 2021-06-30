@@ -1,14 +1,15 @@
 ---
-title: Caddy 2 简明教程
-reward: true
-toc: true
+title: Caddy 2 快速简单安装配置教程
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/2020-11-11_214037.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/2020-11-11_214037.jpg'
 date: 2020-11-10 17:53:10
 tags: 教程
 categories: 
   - 建站
   - Caddy
 ---
+
+
 # 下载安装
 目前有三种安装途径，分别为官网(下面)、Github、各系统包管理。
 
@@ -74,7 +75,7 @@ Caddy 2 直接集成启动/停止等命令了，连系统服务脚本都不需�
 # start 命令是后台运行（可以关闭 SSH 终端），而 run 命令是前台运行。
 # 启动成功会提示：Successfully started Caddy (pid=XXXX) - Caddy is running in the background
 
-/usr/local/caddy/caddy start
+/usr/local/caddy/caddy start --config /usr/local/caddy/Caddyfile --adapter caddyfile
 ```
 ## 停止
 ```bash

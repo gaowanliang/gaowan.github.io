@@ -3,6 +3,7 @@ title: 在Debian/Ubuntu上使用rclone挂载Google Drive网盘
 reward: true
 toc: true
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/717954.png'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/717954.png'
 date: 2020-07-24 15:10:28
 tags: Linux
 categories: 
@@ -10,13 +11,15 @@ categories:
  - Debian
  - rclone
 ---
+
+
+
 # 说明
 本教程只适用Debian/Ubuntu系统，如果你是CentOS或者其它Linux系统，请使用以下命令安装rclone：
 ```bash
 curl https://rclone.org/install.sh | sudo bash
 ```
 初始化配置和挂载方法和下面一样，开机自启可参考该教程→传送门。
-
 # 安装
 ## 安装rclone
 ```bash

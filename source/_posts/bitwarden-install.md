@@ -3,6 +3,7 @@ title: 免费开源的bitwarden_rs自建密码管理系统-安装,使用和备�
 reward: true
 toc: true
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/71850186_p4.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/71850186_p4.jpg'
 date: 2020-05-04 10:06:40
 tags: 教程
 categories: bitwarden
@@ -10,6 +11,10 @@ categories: bitwarden
 # 前言
 原来的时候看过Testv介绍1Password的视频，可以全平台自动填充密码，自动生成无规律密码，看完之后很心动，毕竟密码安全也很重要，但是1Password太贵了，一年至少需要35美元。而且1Password还只能使用信用卡付款，像Paypal也不支持，这让很多想尝试1Password的朋友“望而却步”了。这篇文章主要分享一下在功能上和使用体验上媲美1Password的免费开源密码管理系统Bitwarden，自建Bitwarden，再也不用担心1Password删库“跑路”了。
 # bitwarden_rs安装教程
+
+> 详细安装视频：https://www.bilibili.com/video/BV15t4y117UU
+
+
 > 网站：\
 官网：https://bitwarden.com/ \
 第三方项目：https://github.com/dani-garcia/bitwarden_rs
@@ -99,13 +104,17 @@ docker-compose version 1.25.5, build 4667896b
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 
-## 安装Caddy
-
+## 安装Caddy V2
 bitwarden_rs官方可以选择使用Caddy来搭建Web服务，主要原因是因为Caddy安装配置简单。
+
+安装方法点击 https://gwliang.com/2020/11/10/caddy2-install/
+
+当然你也可以选择使用Nginx，下面也会给出Nginx的配置，如果你没有用过HTTP Server，推荐使用Caddy V2来上手.
+
+## 安装Caddy（已失效，仅作存档）
 
 安装方法点击 https://gwliang.com/2020/01/27/caddy-install
 
-当然你也可以选择使用Nginx，下面也会给出Nginx的配置，如果你没有用过HTTP Server，推荐使用Caddy来上手.
 
 ## bitwarden_rs安装
 
@@ -129,9 +138,19 @@ docker run -d --name bitwarden \
   -v /bw-data/:/data/ \
   bitwardenrs/server:latest
 ```
-## 设置Caddy/Nginx
+## 设置Caddy V2 / Caddy / Nginx
+### Caddy V2
+由于V1版本停止服务了，所以这里更新一下Caddy V2的代码，比V1还简单，在`/usr/local/caddy/Caddyfile`里输入下面的内容即可（要改下面的域名）
+```
+pwd.gwl.wtf {
+        reverse_proxy 127.0.0.1:8880
+        reverse_proxy /notifications/hub 127.0.0.1:3012
+        reverse_proxy /notifications/hub/negotiate 127.0.0.1:8880
+}
+```
 
-如果你使用的是Caddy，在`/usr/local/caddy/Caddyfile`里输入下面的内容即可（要改成下面的域名）
+### Caddy（停止服务，代码仅作存档）
+如果你使用的是Caddy，在`/usr/local/caddy/Caddyfile`里输入下面的内容即可（要改下面的域名）
 ```
 pwd.gwl.wtf {
   gzip
@@ -150,6 +169,7 @@ pwd.gwl.wtf {
   }
 }
 ```
+### Nginx
 如果你使用的是Nginx，可以使用下面的配置（先要配置好了域名、SSL等）
 ```
 server {
@@ -349,6 +369,15 @@ ak和sk可以在七牛云“个人中心”-->“密钥管理”查看。（存�
    "file_type"          :   0
 }
 ```
+之后执行`./qshell qupload upload.conf`查看上传效果
+### 使用crontab定时任务进行定时备份
+
+```bash
+crontab -e # 进入cron定时界面
+
+* 2 * * * /opt/qshell/qshell qupload /opt/qshell/upload.conf > /dev/null # 其中的路径要填写完整路径
+```
+
 # 总结
 bitwarden作为一款开源的密码管理器，其本身支持平台之多，功能之全面，是替代1Password的理想品。bitwarden安装简单，采用Docker镜像，特别适合已经有了VPS建站的朋友，在不影响建站的情况下正常使用bitwarden。
 

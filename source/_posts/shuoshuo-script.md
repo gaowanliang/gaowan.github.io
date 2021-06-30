@@ -3,6 +3,7 @@ title: 说说一键自动批量删除脚本
 reward: true
 toc: true
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/76322190_p0.png'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/76322190_p0.png'
 date: 2020-03-10 11:55:40
 tags: 工具
 categories: 工具

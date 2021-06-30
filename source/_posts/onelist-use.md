@@ -3,6 +3,7 @@ title: OneDrive目录列表OneList使用方法
 reward: true
 toc: true
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/45504728_p0.png'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/45504728_p0.png'
 date: 2020-08-25 21:41:36
 tags: 教程
 categories: OneDrive

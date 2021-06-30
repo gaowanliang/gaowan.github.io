@@ -3,6 +3,7 @@ title: 在Debian/Ubuntu上使用rclone挂载Google Drive网盘
 reward: true
 toc: true
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/57883767_p0.png'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/57883767_p0.png'
 date: 2020-12-02 10:56:07
 tags: 教程
 categories:

@@ -6,6 +6,10 @@ date: 2019-11-22 18:32:56
 tags: Go
 categories: Go
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/wallhaven-md3wd9.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/wallhaven-md3wd9.jpg'
 ---
 
 先把坑开了，到时候再填
+
+2021年4月3日：https://github.com/gaowanliang/gopaste
+坑终于填上了

@@ -6,6 +6,7 @@ date: 2020-02-12 11:01:24
 tags: 工具
 categories: 工具
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/74269323.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/74269323.jpg'
 ---
 
 # 查看你在B站注册的时间

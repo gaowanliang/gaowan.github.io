@@ -2,8 +2,8 @@
 title: Debian系统安装Swap虚拟内存设置
 reward: true
 toc: true
-thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/acv.jpg
-'
+thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/acv.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/acv.jpg'
 date: 2020-05-16 20:31:37
 tags: Linux
 categories: 虚拟内存

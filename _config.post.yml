@@ -1,0 +1,50 @@
+widgets:
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: left
+    type: profile
+    # Author name
+    author: 高玩梁
+    # Author title
+    author_title: 私、気になります(我很好奇).
+    # Author's current location
+    location: 中国
+    # URL or path to the avatar image
+    avatar: https://cdn.jsdelivr.net/gh/gaowanliang/p/img/tx.png
+    # Whether show the rounded avatar image
+    avatar_rounded: false
+    # Email address for the Gravatar
+    gravatar:
+    # URL or path for the follow button
+    follow_link: "https://github.com/gaowanliang"
+    # Links to be shown on the bottom of the profile widget
+    social_links:
+      Github:
+        icon: fab fa-github
+        url: "https://github.com/gaowanliang"
+      QQ:
+        icon: fab fa-qq
+        url: "https://jq.qq.com/?_wv=1027&k=5HV4nXU"
+      Twitter:
+        icon: fab fa-twitter
+        url: "https://twitter.com/gaowanliang"
+      wechat:
+        icon: fab fa-weixin
+        url: "https://dribbble.com"
+      zhihu:
+        icon: fab fa-zhihu
+        url: https://www.zhihu.com/people/gao-wan-liang-spl/activities
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: left
+    type: toc
+    # Whether to show the index of each heading
+    index: true
+    # Whether to collapse sub-headings when they are out-of-view
+    collapsed: true
+    # Maximum level of headings to show (1-6)
+    depth: 3
+  - type: recent_posts
+    position: left
+  - type: categories
+    position: left
+  - type: tags
+    position: left

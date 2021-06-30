@@ -6,4 +6,5 @@ reward: true
 toc: true
 categories:
 thumbnail: ''
+cover: ''
 ---

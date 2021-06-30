@@ -9,6 +9,7 @@ categories:
     - 验证码
     - reCAPTCHA
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/m_i3384843040.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/m_i3384843040.jpg'
 ---
 我看版本2的有人说了，我简单的说一下版本3的使用和集成
 

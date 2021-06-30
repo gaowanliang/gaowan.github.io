@@ -3,6 +3,7 @@ title: B站批量删除抽奖动态脚本
 reward: true
 toc: true
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/m_mayi.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/m_mayi.jpg'
 date: 2020-03-12 00:25:44
 tags: 工具
 categories: 工具

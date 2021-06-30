@@ -6,6 +6,7 @@ date: 2020-02-04 20:08:11
 tags: SSL
 categories: 教程
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/2020-02-04.png'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/2020-02-04.png'
 ---
 # 使用 acme.sh 申请 Let's Encrypt 泛域名SSL证书详细教程
 

@@ -3,6 +3,7 @@ title: 苏联政治笑话
 reward: true
 toc: true
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/wallhaven-ymkqld.png'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/wallhaven-ymkqld.png'
 date: 2020-02-24 16:57:16
 tags: 笑话
 categories: 笑话

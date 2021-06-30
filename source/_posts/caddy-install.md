@@ -10,6 +10,7 @@ categories:
   - Caddy
   - 转载
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/74664457_p0.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/74664457_p0.jpg'
 ---
 
 # 一个极简的HTTP Server： Caddy一键安装脚本，带网站配置教程

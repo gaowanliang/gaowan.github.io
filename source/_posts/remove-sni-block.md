@@ -3,6 +3,7 @@ title: 使用简单方法解决SNI阻断问题
 reward: true
 toc: true
 thumbnail: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/75579060_p0.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/gaowanliang/p/img/75579060_p0.jpg'
 date: 2020-02-21 15:58:33
 tags: 教程
 categories: 教程
