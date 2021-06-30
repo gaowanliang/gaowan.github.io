@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>后端开发人员面试问题 - 高玩梁的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="高玩梁的博客"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="高玩梁的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;arialdomartini&amp;#x2F;Back-End-Developer-Interview-Questions  通用问题 开放式问题 设计模式相关问题 代码设计相关问题 语言相关问题 Web相关问题 数据库相关问题 非关系型数据库相关问题 代码版本管理相关问题 并发问题 分布式系统相关问题 软件生命周期和团队管理相关问题 逻辑和算法相关问题 软件架构相关问题 面"><meta property="og:type" content="blog"><meta property="og:title" content="后端开发人员面试问题"><meta property="og:url" content="https://gwliang.com/2021/06/30/Back-End-Developer-Interview-Questions/"><meta property="og:site_name" content="高玩梁的博客"><meta property="og:description" content="https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;arialdomartini&amp;#x2F;Back-End-Developer-Interview-Questions  通用问题 开放式问题 设计模式相关问题 代码设计相关问题 语言相关问题 Web相关问题 数据库相关问题 非关系型数据库相关问题 代码版本管理相关问题 并发问题 分布式系统相关问题 软件生命周期和团队管理相关问题 逻辑和算法相关问题 软件架构相关问题 面"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/1625021861.png"><meta property="article:published_time" content="2021-06-30T02:30:13.000Z"><meta property="article:modified_time" content="2021-06-30T03:04:06.694Z"><meta property="article:author" content="Gaowan Liang"><meta property="article:tag" content="面试"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/1625021861.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://gwliang.com/2021/06/30/Back-End-Developer-Interview-Questions/"},"headline":"高玩梁的博客","image":["https://cdn.jsdelivr.net/gh/gaowanliang/p/img/1625021861.png"],"datePublished":"2021-06-30T02:30:13.000Z","dateModified":"2021-06-30T03:04:06.694Z","author":{"@type":"Person","name":"Gaowan Liang"},"description":"https:&#x2F;&#x2F;github.com&#x2F;arialdomartini&#x2F;Back-End-Developer-Interview-Questions  通用问题 开放式问题 设计模式相关问题 代码设计相关问题 语言相关问题 Web相关问题 数据库相关问题 非关系型数据库相关问题 代码版本管理相关问题 并发问题 分布式系统相关问题 软件生命周期和团队管理相关问题 逻辑和算法相关问题 软件架构相关问题 面"}</script><link rel="canonical" href="https://gwliang.com/2021/06/30/Back-End-Developer-Interview-Questions/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=UA-158371937-1" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-158371937-1');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico" alt="高玩梁的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/1625021861.png" alt="后端开发人员面试问题"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-30T02:30:13.000Z" title="2021-6-30 10:30:13">2021-06-30</time>发表</span><span class="level-item"><time dateTime="2021-06-30T03:04:06.694Z" title="2021-6-30 11:04:06">2021-06-30</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></span><span class="level-item">32 分钟读完 (大约4785个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">后端开发人员面试问题</h1><div class="content"><p><a target="_blank" rel="noopener" href="https://github.com/arialdomartini/Back-End-Developer-Interview-Questions">https://github.com/arialdomartini/Back-End-Developer-Interview-Questions</a></p>
+<ol>
+<li>通用问题</li>
+<li>开放式问题</li>
+<li>设计模式相关问题</li>
+<li>代码设计相关问题</li>
+<li>语言相关问题</li>
+<li>Web相关问题</li>
+<li>数据库相关问题</li>
+<li>非关系型数据库相关问题</li>
+<li>代码版本管理相关问题</li>
+<li>并发问题</li>
+<li>分布式系统相关问题</li>
+<li>软件生命周期和团队管理相关问题</li>
+<li>逻辑和算法相关问题</li>
+<li>软件架构相关问题</li>
+<li>面向服务架构(SOA)和微服务(Microservice)相关问题</li>
+<li>安全相关问题</li>
+<li>比尔盖茨式问题</li>
+<li>代码示例问题</li>
+</ol>
+<h2 id="通用问题"><a href="#通用问题" class="headerlink" title="通用问题:"></a>通用问题:</h2><ol>
+<li>语言设计中空引用(null reference)的存在有什么问题？假设你想要将空引用的概念从你的首选语言中移除，可能导致什么结果？</li>
+<li>为什么函数式编程重要？什么时候适用函数式语言？</li>
+<li>设计(design)、架构(architecture)、功能(functionality)和美学(aesthetic)之间有什么区别？讨论一下。</li>
+<li>微软、谷歌、欧朋(opera)和火狐这类公司是如何从他们的浏览器中获利的？</li>
+<li>为什么打开TCP套接字有很大的开销？</li>
+<li>封装的重要性体现在哪儿？</li>
+<li>什么是实时系统？它与普通系统有什么区别？</li>
+<li>实时语言(real-time language)和堆内存分配(heap memory allocation)之间的关系是什么？</li>
+<li>不变性(Immutability)是指: (变量的)值只能在创建的时候被设置一次，之后就不能被改变。为什么不变性对写更加安全的代码有帮助？</li>
+<li>可变值(mutable values)和不可变值(immutable values)有哪些优缺点？</li>
+<li>什么是O/R阻抗失衡(Object-Relational impedence mismatch)？</li>
+<li>如果你需要使用缓存，你使用哪些原则来确定缓存的大小？</li>
+<li>TCP和HTTP有什么区别？</li>
+<li>在客户端渲染(client-side rendering)和服务端渲染(server-side rendering)之间，你是如何权衡的？</li>
+<li>如何在一个不可靠的协议之上构建一个可靠的通信协议？</li>
+</ol>
+<h2 id="开放式问题"><a href="#开放式问题" class="headerlink" title="开放式问题:"></a>开放式问题:</h2><ol>
+<li>为什么人们会抵制变化？</li>
+<li>如何向你的祖母解释什么是线程？</li>
+<li>作为一个软件工程师，你想要既要有创新力，又要产出具有可预测性。采用什么策略才能使这两个目标可以共存呢？</li>
+<li>什么是好的代码？</li>
+<li>解释什么是流(Streaming)和如何实现一个流？</li>
+<li>假设你的公司给你一周的时间，用来改善你和同事的生活: 你将如何使用这一周？</li>
+<li>本周你学了什么？</li>
+<li>所有的设计中都会有美学元素(aesthetic element)的存在。问题是，你认为美学元素是你的朋友还是敌人？</li>
+<li>列出最近你读过的5本书。</li>
+<li>假设目前有个大型公司（非常有钱），他们的开发流程是瀑布式流程（Waterfall），如果需要你在他们公司引入持续交付（Continue Devivery），你会怎么做？</li>
+<li>我们来谈谈”重复造轮子”,”非我发明症”, “吃自己做出来的狗粮”的这些做法吧。<br>(注: 重复造轮子: Reinventing the wheel; 非我发明症:Not Invented Here Syndrome; 吃自己做出来的狗粮: Eating Your Own Dog Food)</li>
+<li>在你当前的工作流中，什么事情是你计划下一步需要自动化的？</li>
+<li>为什么写软件是困难的？是什么使软件的维护变得困难？</li>
+<li>你更喜欢在全新项目（Green Field Project）上工作还是在已有项目(Brown Field Project)基础上工作？为什么？</li>
+<li>当你在浏览器地址栏输入google.com回车之后都发生了什么?</li>
+<li>当操作系统CPU处于空闲的时候，它可能在处理哪些事情？</li>
+<li>如何向一个5岁的孩子解释什么是Unicode/数据库事务？</li>
+<li>如何维护单体架构(monolithic architecture)？</li>
+<li>一个”专业的开发者”意味着什么？</li>
+<li>软件开发是艺术、是技艺还是工程？你的观点是什么？</li>
+<li>“喜欢这个的人也喜欢…”，如何在一个电子商务商店里实现这种功能？</li>
+<li>为什么在创新上，企业会比创业公司慢些？</li>
+<li>为什么说，你不应该尝试应用自己发明或者设计的密码学？</li>
+</ol>
+<h2 id="设计模式相关问题"><a href="#设计模式相关问题" class="headerlink" title="设计模式相关问题:"></a>设计模式相关问题:</h2><ol>
+<li><p>请用一个例子表明，全局对象是邪恶的存在。</p>
+</li>
+<li><p>假设你工作的系统不支持事务性，你会如何从头开始实现它？</p>
+</li>
+<li><p>什么是好莱坞原则（Hollywood Principles）？</p>
+</li>
+<li><p>关于迪米特法则(最少知识原则): 写一段代码违反它, 然后修复它。<br>（注: 迪米特法则：the Law of Demeter, 最少知识原则： the Principle of Least Knowledge）</p>
+</li>
+<li><p>Active-Record模式有什么限制和缺陷？</p>
+</li>
+<li><p>Data-Mapper模式和Active-Record模式有什么区别？</p>
+</li>
+<li><p>空对象模式(Null Object Pattern)的目的是什么？</p>
+</li>
+<li><p>为什么组合(Composition)比继承(Inheritance)更好？</p>
+</li>
+<li><p>什么是反腐败层(Anti-corruption Layer)?</p>
+</li>
+<li><p>你可以写一个线程安全的单例(Singleton)类吗？</p>
+</li>
+<li><p>数据抽象(Data Abstraction)能力是指能改变实现而不影响客户端的这种能力。请构造一个一个例子，违反这个特性，并且尝试修复它。</p>
+</li>
+<li><p>你是如何处理依赖关系地狱(Dependency Hell)的？</p>
+</li>
+<li><p>为什么说goto语句是恶魔般的存在？</p>
+</li>
+<li><p>健壮性是进行软件设计时的一个通用原则，它建议 “发送时要保守，接收时要开放”。这也经常被写成，“做一个有耐心的读者，做一个谨慎的作者”。你能解释一些这背后的逻辑吗？</p>
+</li>
+<li><p>译者注： “发送时要保守，接收时要开发”的原文是： “Be conservative in what you send, be liberal in what you accept”，有点类似于“严于律己，宽于待人”的意味。</p>
+</li>
+</ol>
+<h2 id="代码设计相关问题"><a href="#代码设计相关问题" class="headerlink" title="代码设计相关问题:"></a>代码设计相关问题:</h2><ol>
+<li>你在进行软件设计时会考虑软件测试吗？软件测试是如何影响软件设计的？</li>
+<li>内聚和耦合的区别是什么？</li>
+<li>重构在哪些场景下有用？</li>
+<li>代码中的注释有用吗？</li>
+<li>设计和架构有什么区别？</li>
+<li>为什么在测试驱动开发(TDD)中是先写测试，再写代码？</li>
+<li>C++支持多继承，Java允许类实现多个接口。这些特性对正交性有什么影响？使用多继承和使用多接口有区别吗？[这个问题来自Andrew .Hunt 和 David Thomas写的《程序员修炼之道》]</li>
+<li>在存储过程（Stored Procedures）中写业务逻辑有什么优缺点？</li>
+</ol>
+<h2 id="语言相关问题"><a href="#语言相关问题" class="headerlink" title="语言相关问题:"></a>语言相关问题:</h2><ol>
+<li>告诉我你的首选语言的三个最坏的缺陷。</li>
+<li>为什么现在函数式编程这么越来越受关注？</li>
+<li>闭包是什么？它有什么用途？闭包和类有什么共同点？</li>
+<li>泛型有什么用途？</li>
+<li>什么是高阶函数？有什么用途？用你的首选语言写个例子出来。</li>
+<li>讨论一下，如何写一个循环，然后把它转换成递归函数，要避免易变性。</li>
+<li>有些语言将函数视为第一公民，这是什么意思？</li>
+<li>用一个例子说明匿名函数是有用的。</li>
+<li>什么是动态方法调度(Dynamic Method Dispatch)？</li>
+<li>名字空间(Namespace)有什么用？有什么可以替代它的吗？</li>
+<li>谈谈Java和C#之间的互操作性(Interoperability) (任选其他两门语言都行)</li>
+<li>为什么很多软件工程师不喜欢Java？</li>
+<li>你认为好的语言好在哪里？差的语言差在哪里？</li>
+<li>写两个函数，一个是”引用透明的(Referentially Transparent)”，另一个是”引用不透明的(Referentially Opaque)”。讨论之。</li>
+<li>什么是栈？什么是堆？</li>
+<li>为什么一个语言中，”函数是第一公民”是很重要的？</li>
+<li>模式匹配(Pattern Matching)和Switch语句(Switch clauses)的区别在哪儿？</li>
+<li>为什么有些语言设计上没有异常机制？这有什么优缺点？</li>
+<li>如果<code>Cat</code>是一个<code>Animal</code>, 那么<code>TaskCare&lt;Cat&gt;</code>是一个<code>TakeCare&lt;Animal&gt;</code>吗？</li>
+</ol>
+<h2 id="web相关问题"><a href="#web相关问题" class="headerlink" title="web相关问题:"></a>web相关问题:</h2><ol>
+<li>为什么”第一方cookie(first-party cookie)”和”第三方cookie(third-party cookie)”被如此不同的对待？</li>
+</ol>
+<h2 id="数据库相关问题"><a href="#数据库相关问题" class="headerlink" title="数据库相关问题:"></a>数据库相关问题:</h2><ol start="2">
+<li>如果要你将一个项目从MySQL迁移至PostgreSQL中，你会如何迁移？</li>
+<li>为什么SELECT * FROM table WHERE field = null不能匹配空的字段？</li>
+<li>什么是ACID(原子性，一致性，隔离性，持久性)原则？</li>
+<li>你是如何进行数据库模式(Database schema)迁移的？</li>
+<li>延迟加载(lazy loading)是如何实现的？什么场景下有用？他有什么缺陷？</li>
+<li>什么是N+1问题？</li>
+<li>如何找出应用中开销最大的查询？</li>
+</ol>
+<h2 id="非关系型数据库相关问题"><a href="#非关系型数据库相关问题" class="headerlink" title="非关系型数据库相关问题:"></a>非关系型数据库相关问题:</h2><ol>
+<li>什么是最终一致性(Eventual Consistency)？</li>
+<li>关于CAP理论，举一些CP、AP、CA系统的例子。</li>
+<li>NoSQL是如何解决可伸缩性的挑战的？</li>
+<li>什么情况下你会使用类似于MongoDB的文档数据库而不是关系型数据库（如Mysql或者PostgreSQL）？</li>
+</ol>
+<h2 id="代码版本管理相关问题"><a href="#代码版本管理相关问题" class="headerlink" title="代码版本管理相关问题:"></a>代码版本管理相关问题:</h2><ol>
+<li><p>为什么在Mercurial或者git中(管理)分支比SVN容易？</p>
+</li>
+<li><p>分散式版本控制系统（比如git），相比集中式版本控制系统（如svn）有哪些优势和劣势？<br>(注:集中式版本控制系统: Centralized Version Control Systems；分散式版本控制系统: Distributed Version Control Systems)</p>
+</li>
+<li><p>能描述一下什么是GitHubFlow和GitFlow工作流吗？</p>
+</li>
+<li><p>什么是rebase？</p>
+</li>
+<li><p>为什么合并操作(merge)在Mercurial和git中比在SVN和CVS中容易？</p>
+</li>
+</ol>
+<h2 id="并发问题"><a href="#并发问题" class="headerlink" title="并发问题:"></a>并发问题:</h2><ol>
+<li>为什么我们需要并发呢？解释一下。</li>
+<li>为什么测试多线程/并发代码这么困难？</li>
+<li>什么是竞争条件（Race Condition）？用任何一个语言写一个例子。</li>
+<li>什么是死锁？用代码解释一下。</li>
+<li>什么是饿死？</li>
+<li>什么是Wait-Free算法？</li>
+</ol>
+<h2 id="分布式系统相关问题"><a href="#分布式系统相关问题" class="headerlink" title="分布式系统相关问题:"></a>分布式系统相关问题:</h2><ol>
+<li>怎么测试一个分布式系统？</li>
+<li>什么场景下你会在两个系统中采用异步通信机制？</li>
+<li>远程过程调用的通用缺点是什么？</li>
+<li>如果你为了可扩展性和鲁棒性而构建一个分布式的系统，分别在封闭安全的网络环境情况下，和地理上的位置不同但是网络环境不是封闭和安全的情况下，你会考虑什么不同的事情？</li>
+<li>在Web应用中如何管理容错性？在桌面端呢？</li>
+<li>在分布式系统中，如何处理故障？</li>
+<li>让我们来谈谈网络分裂(network partitions)后有的几种恢复的手段吧。</li>
+<li>你认为分布式计算中有哪些谬论？</li>
+<li>你在什么时候会使用Request/Response模式，什么时候使用Publish/Subscribe模式？</li>
+</ol>
+<h2 id="软件生命周期和团队管理相关问题"><a href="#软件生命周期和团队管理相关问题" class="headerlink" title="软件生命周期和团队管理相关问题:"></a>软件生命周期和团队管理相关问题:</h2><ol>
+<li>什么是敏捷（Agility）？</li>
+<li>你是如何处理遗留代码（Legacy Code）的？</li>
+<li>假设我是你们公司的CEO，请向我解释什么是看板，并且说服我在它上面投资。</li>
+<li>敏捷（Agility）和瀑布（Waterfall）之间的最大区别是什么？</li>
+<li>作为团队管理者，你对会议太多这个问题是如何处理的？</li>
+<li>你会如何处理延期很长时间了的项目？</li>
+<li>“个体与交互重于过程和工具”和”客户协作重于合同谈判”占了敏捷宣言（Agile Manifesto）的一半，谈论一下这两个观念。</li>
+<li>如果你是你们公司的CTO，你会采取什么样的决策？</li>
+<li>你觉得项目经理有用吗？</li>
+<li>如果要你组织一个弹性工作制的开发团队（即没有强制工作时间的要求），并且假期制度是”按需休假”，你会如何做？</li>
+<li>你会如何管理一个人员流动非常高的团队？如何在不加薪的条件下说服团队成员不要离开？</li>
+<li>除了代码之外，你最关注你的同事的哪3项素质？</li>
+<li>关于代码，你最希望非技术人员能知道的的三件事是什么？</li>
+</ol>
+<h2 id="逻辑和算法相关问题"><a href="#逻辑和算法相关问题" class="headerlink" title="逻辑和算法相关问题:"></a>逻辑和算法相关问题:</h2><ol>
+<li>只用LIFO栈如何构造一个FIFO队列？只用FIFO队列如何构造一个LIFO栈？</li>
+<li>写一段有栈溢出的代码。</li>
+<li>写一个尾递归版本的阶乘函数。</li>
+<li>使用任何一个语言，写一个REPL，功能是echo你输入的字符串。然后将它演化成一个逆波兰表达式的计算器。</li>
+<li>如果需要你设计一个文件系统磁盘碎片整理程序，你会如何设计？</li>
+<li>写一个生成随机迷宫的程序。</li>
+<li>写一段有内存泄漏的示例代码。</li>
+<li>随机生成一个的数字序列，里面每个数字都不同。</li>
+<li>写一个简单的垃圾回收系统。</li>
+<li>使用任何一门语言，写一个基本的消息代理。</li>
+<li>写一个基础的web服务器，然后画一张线路图，展示你将来还想要实现的功能。</li>
+<li>如何对一个10GB的文件进行排序？如果是10TB的数据，你会采用什么方法？</li>
+<li>请实现rnd()函数</li>
+</ol>
+<h2 id="软件架构相关问题"><a href="#软件架构相关问题" class="headerlink" title="软件架构相关问题:"></a>软件架构相关问题:</h2><ol>
+<li>什么情况下缓存是没用的，甚至是危险的？</li>
+<li>为什么事件驱动的架构能提高可扩展性(scalability)？</li>
+<li>什么样的代码是可读性强的代码？</li>
+<li>紧急设计(Emergent Design)和演化架构(Evolutionary Architecture)之间的区别是什么？</li>
+<li>横向扩展(scale out) vs 纵向扩展(scale up): 有什么区别？分别在什么场景下使用？</li>
+<li>分布式系统中如何处理”故障切换(failover)”和”用户会话(user session)”？</li>
+<li>什么是CQRS(Command Query Responsibility Segregation)?他和最早的Command-Query Separation原则有什么区别？</li>
+<li>什么是三层架构？</li>
+<li>如何设计一个可扩展性高的系统？</li>
+<li>处理C10k问题的策略有哪些？</li>
+<li>如果让你来设计一个去中心化的P2P系统，你会如何设计？</li>
+<li>为什么CGI的扩展性不好？</li>
+<li>在设计系统时，你如何防止供应商依赖(Vendor Lock-in)？</li>
+<li>在可扩展性上，发布/订阅(Publish-Subscribe)模式有什么缺点？</li>
+<li>80年代以后，CPU有哪些变化？这些变化，对编程产生了什么影响？</li>
+<li>性能生命周期(performace lifecycle)中，你认为哪个部分是需要考虑进去的？ 如何管理？</li>
+<li>除了恶意攻击造成的拒绝服务现象以外，哪些设计或者架构上的问题会导致拒绝服务？</li>
+<li>性能和可扩展性之间有什么关系？</li>
+<li>什么时候紧耦合是OK的？</li>
+<li>一个系统要有什么特征才能适配云计算环境(Cloud Ready)？</li>
+<li>Does unity of design imply an aristocracy of architects?</li>
+</ol>
+<h2 id="面向服务架构-SOA-和微服务-Microservice-相关问题"><a href="#面向服务架构-SOA-和微服务-Microservice-相关问题" class="headerlink" title="面向服务架构(SOA)和微服务(Microservice)相关问题:"></a>面向服务架构(SOA)和微服务(Microservice)相关问题:</h2><ol>
+<li>在SOA中，为什么长期存活的事务(Long-lived transation)不被看好，而Saga却被看好？</li>
+<li>SOA和MicroService之间有什么区别？</li>
+<li>我们来谈谈Web服务的版本管理、版本兼容性、重大变更管理这些事情吧.</li>
+<li>在saga中事务和补偿操作(compensation operation)之间的区别是什么？在SOA中呢？</li>
+<li>微服务不能做得太”微”，你认为什么时候微服务太”微”了？</li>
+<li>MicroService架构的优劣是什么？</li>
+</ol>
+<h2 id="安全相关问题"><a href="#安全相关问题" class="headerlink" title="安全相关问题:"></a>安全相关问题:</h2><ol>
+<li>什么是双因素认证(Two Factor Authentication)？在一个已有的Web应用中，你如何实现这种机制？</li>
+</ol>
+<h2 id="比尔盖茨式问题"><a href="#比尔盖茨式问题" class="headerlink" title="比尔盖茨式问题:"></a>比尔盖茨式问题:</h2><ol>
+<li>如果你把一面镜子放在扫描仪上，会发生什么？</li>
+<li>假设有一个和你完全一样的克隆人，而他是你的上司，你愿意和他工作吗？</li>
+<li>现在请你面试一下我。</li>
+<li>为什么Quora上的回答会比Yahoo Answer上的回答好？</li>
+<li>对手是现代语言，你的任务是要为Cobol辩护，你会如何进行？</li>
+<li>10年后的你是什么样子？</li>
+<li>假设你是我老板，我被解雇了。你会如何通知我？</li>
+<li>我想要重构一个系统，而你想要从头重写。我们来争论一下该怎么弄吧。然后我们反转角色，再争论一下。</li>
+<li>老板要你对公司撒谎，你的反应是什么？</li>
+<li>如果你可以穿越到以前，你会给年轻时候的你什么建议？</li>
+</ol>
+<h2 id="代码示例问题"><a href="#代码示例问题" class="headerlink" title="代码示例问题:"></a>代码示例问题:</h2><ol>
+<li>这段Javascript函数的输出是什么？<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hookupevents</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">	<span class="built_in">document</span>.getElementById(<span class="string">&quot;button&quot;</span> + i)</span><br><span class="line">	  .addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">		alert(i); </span><br><span class="line">	  &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>关于类型擦除(Type Erasure)，这段Java代码的输出是什么？为什么？<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Integer&gt; li = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">ArrayList&lt;Float&gt; lf = <span class="keyword">new</span> ArrayList&lt;Float&gt;();</span><br><span class="line"><span class="keyword">if</span> (li.getClass() == lf.getClass()) <span class="comment">// evaluates to true</span></span><br><span class="line">  System.out.println(<span class="string">&quot;Equal&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>你能指出哪儿有内存泄漏吗？<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Object[] elements;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_INITIAL_CAPACITY = <span class="number">16</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Stack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        elements = <span class="keyword">new</span> Object[DEFAULT_INITIAL_CAPACITY];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(Object e)</span> </span>&#123;</span><br><span class="line">        ensureCapacity();</span><br><span class="line">        elements[size++] = e;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (size == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> EmptyStackException();</span><br><span class="line">        <span class="keyword">return</span> elements[--size];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Ensure space for at least one more element, roughly</span></span><br><span class="line"><span class="comment">     * doubling the capacity each time the array needs to grow.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ensureCapacity</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (elements.length == size)</span><br><span class="line">            elements = Arrays.copyOf(elements, <span class="number">2</span> * size + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>if语句，或者更加通用点，条件表达式通常是过程式编程/命令式编程的形式。你能去掉这段代码中的switch语句，用面向对象的方式来修改这段代码吗？<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Formatter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Service service;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Formatter</span><span class="params">(Service service)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.service = service;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">doTheJob</span><span class="params">(String theInput)</span> </span>&#123;</span><br><span class="line">        String response = service.askForPermission();</span><br><span class="line">        <span class="keyword">switch</span> (response) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;FAIL&quot;</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;error&quot;</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;OK&quot;</span>:</span><br><span class="line">            <span class="keyword">return</span> String.format(<span class="string">&quot;%s%s&quot;</span>, theInput, theInput);</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>你能去掉这里的if语句，将它改成更加面向对象吗？<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TheService</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> FileHandler fileHandler;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> FooRepository fooRepository;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TheService</span><span class="params">(FileHandler fileHandler, FooRepository fooRepository)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.fileHandler = fileHandler;</span><br><span class="line">        <span class="keyword">this</span>.fooRepository = fooRepository;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Execute</span><span class="params">(<span class="keyword">final</span> String file)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">final</span> String rewrittenUrl = fileHandler.getXmlFileFromFileName(file);</span><br><span class="line">        <span class="keyword">final</span> String executionId = fileHandler.getExecutionIdFromFileName(file);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> ((executionId == <span class="string">&quot;&quot;</span>) || (rewrittenUrl == <span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Foo knownFoo = fooRepository.getFooByXmlFileName(rewrittenUrl);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (knownFoo == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> knownFoo.DoThat(file);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>如何重构这段代码？<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">function()</span><br><span class="line">&#123;</span><br><span class="line">    HRESULT error = S_OK;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(SUCCEEDED(Operation1()))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(SUCCEEDED(Operation2()))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(SUCCEEDED(Operation3()))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(SUCCEEDED(Operation4()))</span><br><span class="line">                &#123;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    error = OPERATION4FAILED;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                error = OPERATION3FAILED;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            error = OPERATION2FAILED;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        error = OPERATION1FAILED;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> error;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>后端开发人员面试问题</p><p><a href="https://gwliang.com/2021/06/30/Back-End-Developer-Interview-Questions/">https://gwliang.com/2021/06/30/Back-End-Developer-Interview-Questions/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Gaowan Liang</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-06-30</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-06-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/alipay.jpg" alt="支付宝"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/appreciates.jpg" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/05/28/wolfram-advanced-mathematics/"><span class="level-item">Wolfram 高等数学输入方法大全</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="lv-container" data-id="city" data-uid="MTAyMC80Njc4NC8yMzI4NQ=="><script>(function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');</script><noscript>Please activate JavaScript for write a comment in LiveRe</noscript></div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/tx.png" alt="高玩梁"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">高玩梁</p><p class="is-size-6 is-block">私、気になります(我很好奇).</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>中国</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">37</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">35</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">23</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/gaowanliang" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/gaowanliang"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="QQ" href="https://jq.qq.com/?_wv=1027&amp;k=5HV4nXU"><i class="fab fa-qq"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/gaowanliang"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="wechat" href="https://dribbble.com"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://www.zhihu.com/people/gao-wan-liang-spl/activities"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#通用问题"><span class="level-left"><span class="level-item">1</span><span class="level-item">通用问题:</span></span></a></li><li><a class="level is-mobile" href="#开放式问题"><span class="level-left"><span class="level-item">2</span><span class="level-item">开放式问题:</span></span></a></li><li><a class="level is-mobile" href="#设计模式相关问题"><span class="level-left"><span class="level-item">3</span><span class="level-item">设计模式相关问题:</span></span></a></li><li><a class="level is-mobile" href="#代码设计相关问题"><span class="level-left"><span class="level-item">4</span><span class="level-item">代码设计相关问题:</span></span></a></li><li><a class="level is-mobile" href="#语言相关问题"><span class="level-left"><span class="level-item">5</span><span class="level-item">语言相关问题:</span></span></a></li><li><a class="level is-mobile" href="#web相关问题"><span class="level-left"><span class="level-item">6</span><span class="level-item">web相关问题:</span></span></a></li><li><a class="level is-mobile" href="#数据库相关问题"><span class="level-left"><span class="level-item">7</span><span class="level-item">数据库相关问题:</span></span></a></li><li><a class="level is-mobile" href="#非关系型数据库相关问题"><span class="level-left"><span class="level-item">8</span><span class="level-item">非关系型数据库相关问题:</span></span></a></li><li><a class="level is-mobile" href="#代码版本管理相关问题"><span class="level-left"><span class="level-item">9</span><span class="level-item">代码版本管理相关问题:</span></span></a></li><li><a class="level is-mobile" href="#并发问题"><span class="level-left"><span class="level-item">10</span><span class="level-item">并发问题:</span></span></a></li><li><a class="level is-mobile" href="#分布式系统相关问题"><span class="level-left"><span class="level-item">11</span><span class="level-item">分布式系统相关问题:</span></span></a></li><li><a class="level is-mobile" href="#软件生命周期和团队管理相关问题"><span class="level-left"><span class="level-item">12</span><span class="level-item">软件生命周期和团队管理相关问题:</span></span></a></li><li><a class="level is-mobile" href="#逻辑和算法相关问题"><span class="level-left"><span class="level-item">13</span><span class="level-item">逻辑和算法相关问题:</span></span></a></li><li><a class="level is-mobile" href="#软件架构相关问题"><span class="level-left"><span class="level-item">14</span><span class="level-item">软件架构相关问题:</span></span></a></li><li><a class="level is-mobile" href="#面向服务架构-SOA-和微服务-Microservice-相关问题"><span class="level-left"><span class="level-item">15</span><span class="level-item">面向服务架构(SOA)和微服务(Microservice)相关问题:</span></span></a></li><li><a class="level is-mobile" href="#安全相关问题"><span class="level-left"><span class="level-item">16</span><span class="level-item">安全相关问题:</span></span></a></li><li><a class="level is-mobile" href="#比尔盖茨式问题"><span class="level-left"><span class="level-item">17</span><span class="level-item">比尔盖茨式问题:</span></span></a></li><li><a class="level is-mobile" href="#代码示例问题"><span class="level-left"><span class="level-item">18</span><span class="level-item">代码示例问题:</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/06/30/Back-End-Developer-Interview-Questions/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/1625021861.png" alt="后端开发人员面试问题"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-06-30T02:30:13.000Z">2021-06-30</time></p><p class="title"><a href="/2021/06/30/Back-End-Developer-Interview-Questions/">后端开发人员面试问题</a></p><p class="categories"><a href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/05/28/wolfram-advanced-mathematics/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/1622190967.png" alt="Wolfram 高等数学输入方法大全"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-05-28T02:48:20.000Z">2021-05-28</time></p><p class="title"><a href="/2021/05/28/wolfram-advanced-mathematics/">Wolfram 高等数学输入方法大全</a></p><p class="categories"><a href="/categories/wolfram/">wolfram</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-05-25T12:16:43.000Z">2021-05-25</time></p><p class="title"><a href="/2021/05/25/fcgame/">PC+手机端丨FC模拟器网页版/魂斗罗/超级玛丽/双截龙等几十款怀旧游戏</a></p><p class="categories"><a href="/categories/%E6%BA%90%E7%A0%81/">源码</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/05/08/onedrive-download/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/1620438340.png" alt="在纯命令行环境下批量下载OneDrive/SharePoint分享链接中的文件"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-05-08T01:13:31.000Z">2021-05-08</time></p><p class="title"><a href="/2021/05/08/onedrive-download/">在纯命令行环境下批量下载OneDrive/SharePoint分享链接中的文件</a></p><p class="categories"><a href="/categories/OneDrive/">OneDrive</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/04/29/LightUploader-use/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/1619686681.png" alt="LightUploader，一个轻量化的网盘上传工具，支持OneDrive国际/个人/家庭版、世纪互联、Google Drive"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-04-29T08:40:07.000Z">2021-04-29</time></p><p class="title"><a href="/2021/04/29/LightUploader-use/">LightUploader，一个轻量化的网盘上传工具，支持OneDrive国际/个人/家庭版、世纪互联、Google Drive</a></p><p class="categories"><a href="/categories/OneDrive/">OneDrive</a> / <a href="/categories/OneDrive/%E7%BD%91%E7%9B%98/">网盘</a> / <a href="/categories/OneDrive/%E7%BD%91%E7%9B%98/%E4%B8%8A%E4%BC%A0/">上传</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Go/"><span class="level-start"><span class="level-item">Go</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Google-Drive/"><span class="level-start"><span class="level-item">Google Drive</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Google-Drive/Debian/"><span class="level-start"><span class="level-item">Debian</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Google-Drive/Debian/rclone/"><span class="level-start"><span class="level-item">rclone</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/OMNET/"><span class="level-start"><span class="level-item">OMNET++</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/OneDrive/"><span class="level-start"><span class="level-item">OneDrive</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul><li><a class="level is-mobile" href="/categories/OneDrive/%E7%BD%91%E7%9B%98/"><span class="level-start"><span class="level-item">网盘</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/OneDrive/%E7%BD%91%E7%9B%98/%E4%B8%8A%E4%BC%A0/"><span class="level-start"><span class="level-item">上传</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/%E4%BA%8C%E7%BB%B4%E7%A0%81/"><span class="level-start"><span class="level-item">二维码</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/bitwarden/"><span class="level-start"><span class="level-item">bitwarden</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/caddy/"><span class="level-start"><span class="level-item">caddy</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/qbittorrent/"><span class="level-start"><span class="level-item">qbittorrent</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/qbittorrent/VPS/"><span class="level-start"><span class="level-item">VPS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/rclone/"><span class="level-start"><span class="level-item">rclone</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/rclone/Google-drive/"><span class="level-start"><span class="level-item">Google drive</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/wolfram/"><span class="level-start"><span class="level-item">wolfram</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%BB%A3%E7%90%86/"><span class="level-start"><span class="level-item">代理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"><span class="level-start"><span class="level-item">内网穿透</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/zerotier/"><span class="level-start"><span class="level-item">zerotier</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%8A%A0%E9%80%9F/"><span class="level-start"><span class="level-item">加速</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%8D%9A%E5%AE%A2/"><span class="level-start"><span class="level-item">博客</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%B7%A5%E5%85%B7/"><span class="level-start"><span class="level-item">工具</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%BB%BA%E7%AB%99/"><span class="level-start"><span class="level-item">建站</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%BB%BA%E7%AB%99/Caddy/"><span class="level-start"><span class="level-item">Caddy</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%BB%BA%E7%AB%99/Caddy/%E8%BD%AC%E8%BD%BD/"><span class="level-start"><span class="level-item">转载</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/%E6%95%99%E7%A8%8B/"><span class="level-start"><span class="level-item">教程</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E6%95%99%E7%A8%8B/%E9%AA%8C%E8%AF%81%E7%A0%81/"><span class="level-start"><span class="level-item">验证码</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E6%95%99%E7%A8%8B/%E9%AA%8C%E8%AF%81%E7%A0%81/reCAPTCHA/"><span class="level-start"><span class="level-item">reCAPTCHA</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/%E6%B3%95%E5%BE%8B/"><span class="level-start"><span class="level-item">法律</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%BA%90%E7%A0%81/"><span class="level-start"><span class="level-item">源码</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AC%91%E8%AF%9D/"><span class="level-start"><span class="level-item">笑话</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/"><span class="level-start"><span class="level-item">虚拟内存</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9D%A2%E8%AF%95/"><span class="level-start"><span class="level-item">面试</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Cloudflare/"><span class="tag">Cloudflare</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github-Pages/"><span class="tag">Github Pages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Go/"><span class="tag">Go</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OMNET/"><span class="tag">OMNET++</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SSL/"><span class="tag">SSL</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TicToc/"><span class="tag">TicToc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/jsdelivr/"><span class="tag">jsdelivr</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/jsproxy/"><span class="tag">jsproxy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%90%86/"><span class="tag">前端代理</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A0%E9%80%9F/"><span class="tag">加速</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%9A%E5%AE%A2/"><span class="tag">博客</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/"><span class="tag">哔哩哔哩</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A5%E5%85%B7/"><span class="tag">工具</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BB%BA%E7%AB%99/"><span class="tag">建站</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tag">教程</span><span class="tag">16</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%95%E5%BE%8B/"><span class="tag">法律</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%BA%90%E7%A0%81/"><span class="tag">源码</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A7%8B%E6%8B%9B/"><span class="tag">秋招</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%91%E8%AF%9D/"><span class="tag">笑话</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><span class="tag">网络安全</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%A2%E8%AF%95/"><span class="tag">面试</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/tx.ico" alt="高玩梁的博客" height="28"></a><p class="is-size-7"><span>&copy; 2021 Gaowan Liang</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
